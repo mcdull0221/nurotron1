@@ -1,17 +1,12 @@
-# coding=utf-8
 import random
 import unittest
-from functools import wraps
 from time import sleep
-import time
-from appium import webdriver
 import logging
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.wait import WebDriverWait
-import HTMLTestRunner
-from testSet.public import getToast
-from testSet.public import screenShot
+import sys
+sys.path.append('E:/pythonProject/appiumTest/nurotron')
+
+from testSet.public.swipe import swipe
+from testSet.public.driver import AppiumTest
 
 
 class Nurotrontest(unittest.TestCase):
@@ -20,23 +15,7 @@ class Nurotrontest(unittest.TestCase):
     # 所以用setUpClass（cls） 于tearDownClass(cls)代替
     @classmethod
     def setUpClass(cls):
-        desired_caps = {
-            'platformName': 'Android',
-            'platformVersion': '7.1.2',
-            'deviceName': '298384e47d74',
-            # 用activity启动报错，所以用app启动
-            'app': 'E:\\app-debug.apk',
-            'udid': '298384e47d74',
-            'notReset': 'true',
-            # 自动确定确定应用权限
-            'autoGrantPermissions': 'true',
-            'unicodeKeyboard': 'true',
-            'resetKeyboard': 'true',
-            'automationName': 'Uiautomator2'
-        }
-
-        # self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
-        cls.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+        cls.driver = AppiumTest().get_driver()
         sleep(2)
 
     @classmethod
@@ -45,36 +24,14 @@ class Nurotrontest(unittest.TestCase):
     # def tearDown(self):
     #     self.driver.quit()
 
+    def setUp(self):
+        pass
 
-    # 获取页面toast
-    def _find_toast(message, timeout, poll_frequency, driver):
-        message = '//*[@text=\'{}\']'.format(message)
-        element = WebDriverWait(driver, timeout, poll_frequency).until(
-            expected_conditions.presence_of_element_located((By.XPATH, message)))
-        return element
-        # self._find_toast('Hello selendroid toast!',10,0.5,self.driver) 来调用
-
-    def get_Toast(self, message):  # 查找toast值
-        '''
-        method explain:查找toast的值,与find_Toast实现方法一样，只是不同的2种写法
-        parameter explain：【text】查找的toast值
-        Usage:
-            device.get_Toast('再按一次退出iBer')
-        '''
-        logging.info("查找toast值---'%s'" % (message))
-        try:
-            message = '//*[@text=\'{}\']'.format(message)
-            ele = WebDriverWait(self.driver, 5, 0.5).until(
-                expected_conditions.presence_of_element_located((By.XPATH, message)))
-            return ele.get_attribute("text")
-            logging.info("查找到toast----%s" % message)
-        except:
-            logging.error("未查找到toast----%s" % message)
-            return False
+    def tearDown(self):
+        pass
 
     def test_01_Connect(self):
         print("------------开始测试连接--------------")
-
         # 当未打开蓝牙时，会弹出对话框，点击确定
         try:
             el1 = self.driver.find_element_by_id("android:id/button1")
@@ -122,6 +79,8 @@ class Nurotrontest(unittest.TestCase):
                     break
             elif page.__contains__('下拉重新扫描'):
                 self.driver.swipe(343, 329, 340, 700, 1000)
+                print('下拉重新扫描')
+                # swipe().swipe_down()
                 sleep(2)
                 continue
         sleep(2)
@@ -203,6 +162,7 @@ class Nurotrontest(unittest.TestCase):
         print('-------开始测试程序名称------')
         sleep(1)
         self.driver.swipe(600, 1100, 100, 1100, 500)
+        # swipe_on('left')
         sleep(1)
         edittext = self.driver.find_element_by_id('com.nurotron.ble_ui:id/programText')
         edittext.clear()    # 清除输入的内容
@@ -237,17 +197,5 @@ if __name__ == '__main__':
     suite.addTest(Nurotrontest('test_02_Map'))
     suite.addTest(Nurotrontest('test_03_Vol'))
     suite.addTest(Nurotrontest('test_04_MapName'))
-    unittest.TextTestRunner(verbosity=(4)).run(suite)
-    # 获取当前时间
-    # timestr = time.strtime('%Y-%m-%d %X', time.localtime(time.time()))
-    # filename = r"E:\\testReport\\" + timestr + '.html'  # 存放报告的路径
-    # f = open(filename, 'wb')  # 结果写入文件
-    # # 配置参数，输出报告路径，报告标题，描述
-    # runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='Report_title', description='Report_description',
-    #                                        verbosity=2)
-    # runner.run(suite)
-    # # result = runner.run(suite)
-    # # result.success_count # 运行成功的数目
-    # # result.testsRun   # 运行测试用例的数目
-    # # result.failfast   # 运行失败的数目
-    # f.close()
+    unittest.TextTestRunner(verbosity=4).run(suite)
+
