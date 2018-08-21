@@ -7,6 +7,8 @@ sys.path.append('E:/pythonProject/appiumTest/nurotron')
 
 from testSet.public.swipe import swipe
 from testSet.public.driver import AppiumTest
+from util.get_by_local import GetByLocal
+from testSet.public.swipe import swipe
 
 
 class Nurotrontest(unittest.TestCase):
@@ -31,18 +33,16 @@ class Nurotrontest(unittest.TestCase):
         pass
 
     def test_01_Connect(self):
+        get_by_local = GetByLocal(self.driver)
         print("------------开始测试连接--------------")
         # 当未打开蓝牙时，会弹出对话框，点击确定
         try:
-            el1 = self.driver.find_element_by_id("android:id/button1")
+            # el1 = self.driver.find_element_by_id("android:id/button1")
+            el1 = get_by_local.get_element('bleok')
             el1.click()
             sleep(2)
             # 会弹出警告弹框 app正在对手机进行定位
-            em = self.driver.find_element_by_xpath(
-                '/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout'
-                '/android.widget.FrameLayout/android.widget.LinearLayout/android'
-                '.widget.LinearLayout/android.widget.LinearLayout/android.widget'
-                '.Button[2]')
+            em = get_by_local.get_element('locationOk')
             em.click()
             print("已确认对话框")
             # 会弹出警告弹框 app正在对手机进行定位
@@ -61,13 +61,10 @@ class Nurotrontest(unittest.TestCase):
                 print("设备查找中")
                 if page1.__contains__('00:02:5B'):
                     print("已找到设备")
-                    el1 = self.driver.find_element_by_xpath(
-                        "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout"
-                        "/android.widget.LinearLayout/android.view.ViewGroup/android.widget.ListView/android.widget"
-                        ".LinearLayout")
+                    el1 = get_by_local.get_element('driverList')
                     el1.click()
                     sleep(2)
-                    el2 = self.driver.find_element_by_id("android:id/button1")
+                    el2 = get_by_local.get_element('connectSure')
                     el2.click()
                     sleep(2)
                     break
@@ -78,9 +75,9 @@ class Nurotrontest(unittest.TestCase):
                     logging.error('没有找到设备，请检查')
                     break
             elif page.__contains__('下拉重新扫描'):
-                self.driver.swipe(343, 329, 340, 700, 1000)
+                # self.driver.swipe(343, 329, 340, 700, 1000)
                 print('下拉重新扫描')
-                # swipe().swipe_down()
+                swipe().swipe_down()
                 sleep(2)
                 continue
         sleep(2)

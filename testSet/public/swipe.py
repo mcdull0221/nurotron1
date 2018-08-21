@@ -5,8 +5,8 @@ from testSet.public.driver import AppiumTest
 class swipe():
     # 获取屏幕的高和宽
     def __init__(self):
-        driver = AppiumTest().get_driver()
-        self.driver = driver
+        at = AppiumTest()
+        self.driver = at.get_driver()
 
     def get_size(self):
         size = self.driver.get_window_size()
@@ -34,8 +34,8 @@ class swipe():
     def swipe_down(self):
         # [x , y]
         x1 = self.get_size()[0] / 2
-        y1 = self.get_size()[1] / 10 * 4
-        y2 = self.get_size()[0] / 10 * 7
+        y1 = self.get_size()[1] / 10 * 3
+        y2 = self.get_size()[0] / 10 * 8
         self.driver.swipe(x1, y1, x1, y2, 500)
 
 

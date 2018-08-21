@@ -33,5 +33,5 @@ class ReadIni():
 
 if __name__ == '__main__':
     read_ini = ReadIni()
-    print(ReadIni().get_value('map1', 'mainpage_element'))
+
 
