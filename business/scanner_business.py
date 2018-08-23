@@ -7,8 +7,7 @@ from time import sleep
 
 class scannerBusiness:
     def __init__(self):
-        self.scanner_handle =scannerHandle()
-        self.swipe = swipe()
+        self.scanner_handle = scannerHandle()
 
     def connect_devices(self):
         try:
