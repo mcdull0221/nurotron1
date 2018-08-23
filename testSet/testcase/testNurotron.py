@@ -5,7 +5,6 @@ import logging
 import sys
 sys.path.append('E:/pythonProject/appiumTest/nurotron')
 
-from testSet.public.swipe import swipe
 from testSet.public.driver import AppiumTest
 from util.get_by_local import GetByLocal
 from testSet.public.swipe import swipe

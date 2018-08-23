@@ -6,9 +6,9 @@ from testSet.public.swipe import swipe
 from time import sleep
 
 class scannerBusiness:
-    def __init__(self,driver):
-        self.scanner_handle =scannerHandle(driver)
-        self.swipe = swipe(driver)
+    def __init__(self):
+        self.scanner_handle =scannerHandle()
+        self.swipe = swipe()
 
     def connect_devices(self):
         try:

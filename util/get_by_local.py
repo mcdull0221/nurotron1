@@ -2,7 +2,7 @@ __author__ = 'songxiaolin'
 from util.read_init import ReadIni
 
 
-class GetByLocal():
+class GetByLocal:
     def __init__(self, driver):
         self.driver = driver
 

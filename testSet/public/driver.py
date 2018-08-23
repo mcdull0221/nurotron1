@@ -1,9 +1,10 @@
 __author__ = 'songxiaolin'
 from appium import webdriver
+import time
 
 
-class AppiumTest():
-    def __init__(self):
+class BaseDriver:
+    def android_driver(self):
         desired_caps = {
             'platformName': 'Android',
             'platformVersion': '7.1.2',
@@ -17,8 +18,12 @@ class AppiumTest():
             'resetKeyboard': 'true',
             'automationName': 'Uiautomator2',
         }
-        self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
-        self.driver.implicitly_wait(30)
+        driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+        time.sleep(10)
+        return driver
+
+    def ios_driver(self):
+        pass
 
     def get_driver(self):
-        return self.driver
+        pass
