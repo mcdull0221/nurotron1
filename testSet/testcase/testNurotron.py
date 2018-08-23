@@ -77,7 +77,7 @@ class Nurotrontest(unittest.TestCase):
             elif page.__contains__('下拉重新扫描'):
                 # self.driver.swipe(343, 329, 340, 700, 1000)
                 print('下拉重新扫描')
-                swipe().swipe_down()
+                swipe.swipe_down()
                 sleep(2)
                 continue
         sleep(2)
