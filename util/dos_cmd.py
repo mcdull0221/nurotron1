@@ -18,4 +18,4 @@ class DosCmd:
 
 if __name__ == '__main__':
     dos = DosCmd()
-    print(dos.excute_cmd_result())
+    print(dos.excute_cmd_result('adb devices'))

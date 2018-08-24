@@ -42,7 +42,7 @@ if __name__ =='__main__':
     # unittest.main()
     # 多线程
     threads = []
-    for i in range(3):
+    for i in range(2):
         # print i
         t = threading.Thread(target=get_suite, args=(i,))
         threads.append(t)
