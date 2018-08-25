@@ -5,9 +5,10 @@ from Handle.scanner_handle import scannerHandle
 from testSet.public.swipe import swipe
 from time import sleep
 
+
 class scannerBusiness:
-    def __init__(self):
-        self.scanner_handle = scannerHandle()
+    def __init__(self, i):
+        self.scanner_handle = scannerHandle(i)
 
     def connect_devices(self):
         try:

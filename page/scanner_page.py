@@ -1,10 +1,12 @@
 __author__ = 'songxiaolin'
 from testSet.public.driver import BaseDriver
 from util.get_by_local import GetByLocal
+
+
 class scannerPage:
-    def __init__(self):
+    def __init__(self, i):
         get_driver = BaseDriver()
-        self.driver = get_driver.android_driver()
+        self.driver = get_driver.android_driver(i)
         self.get_by_local = GetByLocal(self.driver)
 
     def get_bleAlert_ok(self):

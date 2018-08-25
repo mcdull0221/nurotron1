@@ -5,11 +5,12 @@ from appium import webdriver
 import HTMLTestRunner
 import unittest
 
+
 class testcase(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.scanner_business = scannerBusiness()
+        cls.scanner_business = scannerBusiness(i)
 
     def setUp(self):
         print('set up')

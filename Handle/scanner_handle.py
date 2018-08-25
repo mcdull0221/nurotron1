@@ -1,9 +1,10 @@
 __author__ = 'songxiaolin'
 from page.scanner_page import scannerPage
 
+
 class scannerHandle:
-    def __init__(self,):
-        self.scanner_page = scannerPage()
+    def __init__(self, i):
+        self.scanner_page = scannerPage(i)
 
     def click_ble_ok(self):
         ''' 提示打开蓝牙弹出框点击确认按钮'''
