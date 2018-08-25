@@ -9,7 +9,7 @@ from util.server import Server
 
 class ParameTestCase(unittest.TestCase):
     def __init__(self, methodName='runTest', parame=None):
-        super().__init__(methodName)
+        super(ParameTestCase, self).__init__(methodName)
         global parames
         parames = parame
 
@@ -31,12 +31,18 @@ class testcase(ParameTestCase):
         print('tear down class')
 
     def test_01(self):
+        self.scanner_business = scannerBusiness(i)
         print('test01'+str(parames))
 
     def test_02(self):
         print('test02'+ str(parames))
 
+def appium_init():
+    server = Server()
+    server.main()
+
 def get_suite(i):
+    print("get_suite里的"+str(i))
     suite = unittest.TestSuite()
     suite.addTest(testcase('test_02', parame=i))
     # suite.addTest(testcase('test_01'))
@@ -48,12 +54,14 @@ def get_suite(i):
     # HTMLTestRunner.HTMLTestRunner(stream=fp, title='APP测试报告', description='用例执行情况').run(suite)
     # fp.close()
 
-if __name__ =='__main__':
+
+if __name__ == '__main__':
     # unittest.main()
     # 多线程
+    appium_init()
     threads = []
-    for i in range(2):
-        # print i
+    for i in range(1):
+        print("i = " + str(i))
         t = threading.Thread(target=get_suite, args=(i,))
         threads.append(t)
     for j in threads:

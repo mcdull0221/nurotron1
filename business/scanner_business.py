@@ -1,6 +1,5 @@
-import logging
-
 __author__ = 'songxiaolin'
+import logging
 from Handle.scanner_handle import scannerHandle
 from testSet.public.swipe import swipe
 from time import sleep

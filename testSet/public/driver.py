@@ -9,8 +9,8 @@ class BaseDriver:
         self.write_file = WriteUserCommand()
 
     def android_driver(self, i):
-        deviceName = self.write_file.get_value('user_info'+str(i),'deviceName')
-        port = self.write_file.get_value('user_info'+str(i),'port')
+        deviceName = self.write_file.get_value('user_info_'+str(i), 'deviceName')
+        port = self.write_file.get_value('user_info_'+str(i), 'port')
         desired_caps = {
             'platformName': 'Android',
             # 'platformVersion': '7.1.2',
@@ -23,7 +23,7 @@ class BaseDriver:
             'resetKeyboard': 'true',
             'automationName': 'Uiautomator2',
         }
-        driver = webdriver.Remote('http://localhost:'+port+'/wd/hub', desired_caps)
+        driver = webdriver.Remote('http://localhost:'+str(port)+'/wd/hub', desired_caps)
         time.sleep(10)
         return driver
 
