@@ -4,16 +4,24 @@ from business.scanner_business import scannerBusiness
 from appium import webdriver
 import HTMLTestRunner
 import unittest
+from util.server import Server
 
 
-class testcase(unittest.TestCase):
+class ParameTestCase(unittest.TestCase):
+    def __init__(self, methodName='runTest', parame=None):
+        super().__init__(methodName)
+        global parames
+        parames = parame
 
+
+class testcase(ParameTestCase):
     @classmethod
     def setUpClass(cls):
-        cls.scanner_business = scannerBusiness(i)
+        print('setUpClass'+ str(parames))
+        # cls.scanner_business = scannerBusiness(i)
 
     def setUp(self):
-        print('set up')
+        print('set up'+str(parames))
 
     def tearDown(self):
         print('tear down')
@@ -23,21 +31,22 @@ class testcase(unittest.TestCase):
         print('tear down class')
 
     def test_01(self):
-        print('test01')
+        print('test01'+str(parames))
 
     def test_02(self):
-        print('test02')
+        print('test02'+ str(parames))
 
 def get_suite(i):
     suite = unittest.TestSuite()
-    suite.addTest(testcase('test_02'))
-    suite.addTest(testcase('test_01'))
-    # unittest.TextTestRunner().run(suite)
-    now = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
-    html_file = "E:/pythonProject/appiumTest/nurotron/result/report/" + now + "report"+str(i) +".html"
-    fp = open(html_file, "wb")
-    HTMLTestRunner.HTMLTestRunner(stream=fp, title='APP测试报告', description='用例执行情况').run(suite)
-    fp.close()
+    suite.addTest(testcase('test_02', parame=i))
+    # suite.addTest(testcase('test_01'))
+    suite.addTest(testcase('test_01', parame=i))
+    unittest.TextTestRunner().run(suite)
+    # now = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
+    # html_file = "E:/pythonProject/appiumTest/nurotron/result/report/" + now + "report"+str(i) +".html"
+    # fp = open(html_file, "wb")
+    # HTMLTestRunner.HTMLTestRunner(stream=fp, title='APP测试报告', description='用例执行情况').run(suite)
+    # fp.close()
 
 if __name__ =='__main__':
     # unittest.main()
@@ -49,4 +58,5 @@ if __name__ =='__main__':
         threads.append(t)
     for j in threads:
         j.start()
+        time.sleep(1)
 
