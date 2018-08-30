@@ -23,7 +23,7 @@ class BaseDriver:
             'resetKeyboard': 'true',
             'automationName': 'Uiautomator2',
         }
-        driver = webdriver.Remote('http://0.0.0.0:'+str(port)+'/wd/hub', desired_caps)
+        driver = webdriver.Remote('http://localhost:'+str(port)+'/wd/hub', desired_caps)
         time.sleep(10)
         return driver
 

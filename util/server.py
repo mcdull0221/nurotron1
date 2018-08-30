@@ -30,7 +30,7 @@ class Server:
         else:
             return None
 
-    def create_port_list(self,start_port):
+    def create_port_list(self, start_port):
         """
         创建可用端口
         :return:
