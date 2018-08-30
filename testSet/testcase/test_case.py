@@ -53,12 +53,12 @@ def get_suite(i):
     suite = unittest.TestSuite()
     # suite.addTest(testcase('test_02', parame=i))
     suite.addTest(testcase('test_01', parame=i))
-    unittest.TextTestRunner().run(suite)
-    # now = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
-    # html_file = "E:/pythonProject/appiumTest/nurotron/result/report/" + now + "report"+str(i) +".html"
-    # fp = open(html_file, "wb")
-    # HTMLTestRunner.HTMLTestRunner(stream=fp, title='APP测试报告', description='用例执行情况').run(suite)
-    # fp.close()
+    # unittest.TextTestRunner().run(suite)
+    now = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
+    html_file = "E:/pythonProject/appiumTest/nurotron/result/report/" + now + "report"+str(i) +".html"
+    fp = open(html_file, "wb")
+    HTMLTestRunner.HTMLTestRunner(stream=fp, title='APP测试报告', description='用例执行情况').run(suite)
+    fp.close()
 
 
 def get_count():
