@@ -21,3 +21,11 @@ class scannerHandle:
     def click_driver_ok(self):
         ''' 确认连接设备 '''
         self.scanner_page.get_driver_ok().click()
+
+    def chack_page_source(self, source):
+        """查询页面是否包含某个元素"""
+        page_source = self.scanner_page.get_page_source()
+        if page_source.__contains__(source):
+            return True
+        else:
+            return False

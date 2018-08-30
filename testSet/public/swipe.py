@@ -1,12 +1,10 @@
 __author__ = 'songxiaolin'
-from testSet.public.driver import BaseDriver
+from business.driver import Driver
 
-
-class swipe:
+class Swipe():
     # 获取屏幕的高和宽
-    def __init__(self):
-        get_driver = BaseDriver()
-        self.driver = get_driver.android_driver()
+    def __init__(self, i):
+        self.driver = Driver().driver(i)
 
     def get_size(self):
         size = self.driver.get_window_size()

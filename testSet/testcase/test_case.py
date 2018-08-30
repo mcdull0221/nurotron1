@@ -1,10 +1,12 @@
 import threading
 import time
+import multiprocessing
 from business.scanner_business import scannerBusiness
 from appium import webdriver
 import HTMLTestRunner
 import unittest
 from util.server import Server
+from util.write_user_command import WriteUserCommand
 
 
 class ParameTestCase(unittest.TestCase):
@@ -17,11 +19,20 @@ class ParameTestCase(unittest.TestCase):
 class testcase(ParameTestCase):
     @classmethod
     def setUpClass(cls):
-        print('setUpClass'+ str(parames))
-        # cls.scanner_business = scannerBusiness(i)
+        print("setUpclass---->", str(parames))
+        cls.scanner_business = scannerBusiness(parames)
 
     def setUp(self):
         print('set up'+str(parames))
+
+    def test_01(self):
+        scanner_result = self.scanner_business.devices_nofound()
+        print('test01'+str(parames))
+        self.assertTrue(scanner_result)
+
+    def test_02(self):
+        print('test02'+ str(parames))
+        self.assertTrue(True)
 
     def tearDown(self):
         print('tear down')
@@ -29,23 +40,18 @@ class testcase(ParameTestCase):
     @classmethod
     def tearDownClass(cls):
         print('tear down class')
+        # cls.driver.quit()
 
-    def test_01(self):
-        self.scanner_business = scannerBusiness(i)
-        print('test01'+str(parames))
-
-    def test_02(self):
-        print('test02'+ str(parames))
 
 def appium_init():
     server = Server()
     server.main()
 
+
 def get_suite(i):
     print("get_suite里的"+str(i))
     suite = unittest.TestSuite()
-    suite.addTest(testcase('test_02', parame=i))
-    # suite.addTest(testcase('test_01'))
+    # suite.addTest(testcase('test_02', parame=i))
     suite.addTest(testcase('test_01', parame=i))
     unittest.TextTestRunner().run(suite)
     # now = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
@@ -55,14 +61,21 @@ def get_suite(i):
     # fp.close()
 
 
+def get_count():
+    write_user_file = WriteUserCommand()
+    count = write_user_file.get_file_lines()
+    return count
+
+
 if __name__ == '__main__':
     # unittest.main()
     # 多线程
     appium_init()
     threads = []
-    for i in range(1):
+    for i in range(get_count()):
         print("i = " + str(i))
-        t = threading.Thread(target=get_suite, args=(i,))
+        # t = threading.Thread(target=get_suite, args=(i,)) 多线程启动
+        t = multiprocessing.Process(target=get_suite, args=(i,))    # 多进程启动
         threads.append(t)
     for j in threads:
         j.start()

@@ -36,7 +36,7 @@ class Server:
         :return:
         """
         port = Port()
-        port_list = []
+        # port_list = []
         port_list = port.create_port_list(start_port, self.device_list)
         return port_list
 
@@ -46,12 +46,11 @@ class Server:
         :return:command_list
         """
         command_list = []
-        appium_port_list = self.create_port_list(4700)
+        appium_port_list = self.create_port_list(4723)
         bootstrap_port_list = self.create_port_list(4900)
         device_list = self.device_list
         # for i in range(len(device_list)):
-        commend = "appium -p "+str(appium_port_list[i])+" -bp "+str(bootstrap_port_list[i])+" -U "+device_list[i]+\
-                  " --no-reset --session-override"
+        commend = "appium -p "+str(appium_port_list[i])+" -bp "+str(bootstrap_port_list[i])+" -U "+device_list[i]+" --no-reset --session-override"
         command_list.append(commend)
         #调用write_data方法将参数写人yaml文件中
         self.write_file.write_data(i, device_list[i], bootstrap_port_list[i], appium_port_list[i])
@@ -63,8 +62,8 @@ class Server:
         当有多个设备时，多线程启动
         :return:
         """
-        self.start_list = self.create_command_list(i)
-        self.dos.excute_cmd(self.start_list[0])
+        start_list = self.create_command_list(i)
+        self.dos.excute_cmd(start_list[0])
         # self.dos.excute_cmd(self.start_list[i])
         # 启动多个线程时，用i会报错，因为start_list里面只有一个元素。
 
@@ -84,12 +83,15 @@ class Server:
         先杀掉多余进程和情况yaml文件
         :return:
         """
-        self.write_file.clear_data()
+        thread_list = []
         self.kill_server()
+        self.write_file.clear_data()
         for i in range(len(self.device_list)):
             appium_start = threading.Thread(target=self.start_server, args=(i,))
-            appium_start.start()
-        time.sleep(20)
+            thread_list.append(appium_start)
+        for j in thread_list:
+            j.start()
+        time.sleep(25)
 
 
 if __name__ == '__main__':

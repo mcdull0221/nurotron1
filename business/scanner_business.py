@@ -1,13 +1,14 @@
 __author__ = 'songxiaolin'
 import logging
 from Handle.scanner_handle import scannerHandle
-from testSet.public.swipe import swipe
+from testSet.public.swipe import Swipe
 from time import sleep
 
 
 class scannerBusiness:
     def __init__(self, i):
         self.scanner_handle = scannerHandle(i)
+        self.swipe = Swipe(i)
 
     def connect_devices(self):
         try:
@@ -18,10 +19,6 @@ class scannerBusiness:
         except:
             logging.info('未发现蓝牙弹框')
             pass
-
-    def get_scanner_page(self):
-        scannerpage = self.driver.page_source
-        return scannerpage
 
     def devices_nofound(self):
         self.connect_devices()
@@ -52,19 +49,22 @@ class scannerBusiness:
 
         for i in range(1, 11):
             sleep(10)
-            scanner_page = self.get_scanner_page()
-            if scanner_page.__contains__('00:02:5B'):
+            # scannerHandle.chack_page_source("下拉重新扫描")
+            if self.scanner_handle.chack_page_source("00:02:5B"):
                 self.scanner_handle.click_driver()
                 sleep(2)
                 self.scanner_handle.click_driver_ok()
                 return True
                 break
-            elif scanner_page.__contains__('设备查找中'):
+            elif self.scanner_handle.chack_page_source("设备查找中"):
+                print("设备查找中")
                 pass
-            elif scanner_page.__contains__('下拉重新扫描'):
-                swipe.swipe_down()
+            elif self.scanner_handle.chack_page_source("下拉重新扫描"):
+                print("下拉重新扫描")
+                self.swipe.swipe_down()
                 sleep(1)
                 continue
             else:
                 return False
+
 

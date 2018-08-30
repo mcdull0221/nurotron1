@@ -5,9 +5,9 @@ import logging
 import sys
 sys.path.append('E:/pythonProject/appiumTest/nurotron')
 
-from testSet.public.driver import AppiumTest
+from testSet.public.driver import BaseDriver
 from util.get_by_local import GetByLocal
-from testSet.public.swipe import swipe
+from testSet.public.swipe import Swipe
 
 
 class Nurotrontest(unittest.TestCase):
@@ -16,7 +16,7 @@ class Nurotrontest(unittest.TestCase):
     # 所以用setUpClass（cls） 于tearDownClass(cls)代替
     @classmethod
     def setUpClass(cls):
-        cls.driver = AppiumTest().get_driver()
+        cls.driver = BaseDriver().get_driver()
         sleep(2)
 
     @classmethod
@@ -76,7 +76,7 @@ class Nurotrontest(unittest.TestCase):
             elif page.__contains__('下拉重新扫描'):
                 # self.driver.swipe(343, 329, 340, 700, 1000)
                 print('下拉重新扫描')
-                swipe.swipe_down()
+                Swipe().swipe_down()
                 sleep(2)
                 continue
         sleep(2)

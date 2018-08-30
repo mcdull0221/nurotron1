@@ -25,3 +25,10 @@ class scannerPage:
         ''' 当点击已找到的设备会有二次对话框，返回确定元素 '''
         return self.get_by_local.get_element('connectSure')
 
+    def get_page_source(self):
+        """
+        获取页面所有元素
+        :return: scannerpage
+        """
+        scannerpage = self.driver.page_source
+        return scannerpage
