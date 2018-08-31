@@ -14,22 +14,22 @@ class ActionMethod:
         self.driver = base_driver.android_driver(0)
         self.get_by_local = GetByLocal(self.driver)
 
-    def input(self, element_key, value):
+    def input(self, *args):
         """输入值"""
-        element = self.get_by_local.get_element(element_key)
+        element = self.get_by_local.get_element(args[0])
         if element == None:
-            return element_key, "元素没找到"
-        element.send_keys(value)
+            return "元素没找到"
+        element.send_keys(args[1])
 
-    def on_click(self, element_key):
+    def on_click(self, *args):
         """点击元素"""
-        element = self.get_by_local.get_element(element_key)
+        element = self.get_by_local.get_element(args[0])
         if element == None:
-            return element_key, "元素没找到"
+            return "元素没找到"
         element.click()
 
-    def sleep_time(self, value):
-        time.sleep(value)
+    def sleep_time(self, *args):
+        time.sleep(*args[0])
 
     def get_size(self):
         size = self.driver.get_window_size()
@@ -60,3 +60,9 @@ class ActionMethod:
         y1 = self.get_size()[1] / 10 * 3
         y2 = self.get_size()[0] / 10 * 8
         self.driver.swipe(x1, y1, x1, y2, 500)
+
+    def get_element(self, *args):
+        element = self.get_by_local.get_element(args[0])
+        if element == None:
+            return None
+        return element
