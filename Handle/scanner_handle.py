@@ -2,7 +2,7 @@ __author__ = 'songxiaolin'
 from page.scanner_page import scannerPage
 
 
-class scannerHandle:
+class ScannerHandle:
     def __init__(self, i):
         self.scanner_page = scannerPage(i)
 
@@ -22,10 +22,18 @@ class scannerHandle:
         ''' 确认连接设备 '''
         self.scanner_page.get_driver_ok().click()
 
-    def chack_page_source(self, source):
+    def chack_page_source(self, value):
         """查询页面是否包含某个元素"""
         page_source = self.scanner_page.get_page_source()
-        if page_source.__contains__(source):
+        if page_source.__contains__(value):
             return True
         else:
             return False
+
+    def swipe_down(self):
+        self.scanner_page.swipe_down()
+
+if __name__ == '__main__':
+    scanner_handle = ScannerHandle(0)
+    page_source = scanner_handle.chack_page_source("00:02:5B")
+    print(page_source)

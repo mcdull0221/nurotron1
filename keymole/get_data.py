@@ -39,6 +39,20 @@ class GetData:
             return None
         return expect_element
 
+    def get_is_run(self, row):
+        is_run = self.opera_excel.get_cell(row, 8)
+        if is_run =="yes":
+            return True
+        else:
+            return False
+
+    def get_expect_handle(self, row):
+        expect_step = self.opera_excel.get_cell(row,7)
+        if expect_step == None:
+            return None
+        else:
+            return expect_step
+
 
 if __name__ == '__main__':
     get = GetData()

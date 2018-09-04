@@ -1,7 +1,7 @@
 import threading
 import time
 import multiprocessing
-from business.scanner_business import scannerBusiness
+from business.scanner_business import ScannerBusiness
 from appium import webdriver
 import HTMLTestRunner
 import unittest
@@ -11,7 +11,7 @@ from util.write_user_command import WriteUserCommand
 
 class ParameTestCase(unittest.TestCase):
     def __init__(self, methodName='runTest', parame=None):
-        super(ParameTestCase, self).__init__(methodName)
+        super().__init__(methodName)
         global parames
         parames = parame
 
@@ -20,13 +20,13 @@ class testcase(ParameTestCase):
     @classmethod
     def setUpClass(cls):
         print("setUpclass---->", str(parames))
-        cls.scanner_business = scannerBusiness(parames)
+        cls.scanner_business = ScannerBusiness(parames)
 
     def setUp(self):
         print('set up'+str(parames))
 
     def test_01(self):
-        scanner_result = self.scanner_business.devices_nofound()
+        scanner_result = self.scanner_business.devices_found()
         print('test01'+str(parames))
         self.assertTrue(scanner_result)
 
