@@ -1,3 +1,5 @@
+import logging
+
 __author__ = 'songxiaolin'
 from util.dos_cmd import DosCmd
 from util.port import Port
@@ -56,6 +58,18 @@ class Server:
         self.write_file.write_data(i, device_list[i], bootstrap_port_list[i], appium_port_list[i])
         return command_list
 
+    def uninstall_apk(self):
+        """
+        查找设备是否安装了app
+        如果已安装，则卸载
+        :return:
+        """
+        apk_list = self.dos.excute_cmd_result('adb shell pm list packages')
+        if 'package:com.nurotron.ble_ui' in apk_list:
+            self.dos.excute_cmd('adb uninstall com.nurotron.ble_ui')
+        else:
+            print('no apk')
+
     def start_server(self, i):
         """
         命令行启动服务
@@ -80,10 +94,12 @@ class Server:
     def main(self):
         """
         多线程启动appium服务
-        先杀掉多余进程和情况yaml文件
+        先杀掉多余进程和清除yaml文件
+        卸载APP
         :return:
         """
         thread_list = []
+        self.uninstall_apk()
         self.kill_server()
         self.write_file.clear_data()
         for i in range(len(self.device_list)):

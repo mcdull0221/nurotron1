@@ -19,3 +19,10 @@ class DosCmd:
 if __name__ == '__main__':
     dos = DosCmd()
     print(dos.excute_cmd_result('adb devices'))
+    # r = dos.excute_cmd_result('adb shell pm list packages')
+    # print(r)
+    # i = 'package:com.nurotron.ble_ui'
+    # if i in r:
+    #     print('yes')
+    # else:
+    #     print('no')

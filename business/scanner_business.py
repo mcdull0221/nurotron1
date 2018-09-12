@@ -12,12 +12,15 @@ class ScannerBusiness:
         try:
             self.scanner_handle.click_ble_ok()
             sleep(2)
-            self.scanner_handle.click_location_ok()
-            sleep(2)
         except:
-            logging.info('未发现蓝牙弹框')
+            # try:
+            #     self.scanner_handle.click_location_ok()
+            #     sleep(2)
+            # except:
+            #     pass
             pass
 
+    @property
     def devices_found(self):
         self.connect_devices()
         for i in range(1, 11):
@@ -37,4 +40,3 @@ class ScannerBusiness:
                 continue
             else:
                 return False
-

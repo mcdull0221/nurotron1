@@ -20,13 +20,14 @@ class testcase(ParameTestCase):
     @classmethod
     def setUpClass(cls):
         print("setUpclass---->", str(parames))
-        cls.scanner_business = ScannerBusiness(parames)
+        # cls.scanner_business = ScannerBusiness(parames)
 
     def setUp(self):
         print('set up'+str(parames))
 
     def test_01(self):
-        scanner_result = self.scanner_business.devices_found()
+        self.scanner_business = ScannerBusiness(parames)
+        scanner_result = self.scanner_business.devices_found
         print('test01'+str(parames))
         self.assertTrue(scanner_result)
 

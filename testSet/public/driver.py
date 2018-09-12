@@ -15,13 +15,12 @@ class BaseDriver:
             'platformName': 'Android',
             # 'platformVersion': '7.1.2',
             'deviceName': deviceName,
-            # 不需要用appActivity启动，有时会报错。
-            'app': 'E:\\app-debug.apk',
             # 自动确定确定应用权限
             'autoGrantPermissions': 'true',
             'unicodeKeyboard': 'true',
             'resetKeyboard': 'true',
             'automationName': 'Uiautomator2',
+            'app': 'E:\\app-debug.apk',
         }
         driver = webdriver.Remote('http://localhost:'+str(port)+'/wd/hub', desired_caps)
         time.sleep(10)
