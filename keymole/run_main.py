@@ -19,10 +19,10 @@ class RunMain:
             expect_step = data.get_expect_handle(i)
 
             excute_method = getattr(action_method, handle_step)
-            if handle_value != None:
+            if element_key != None:
                 excute_method(element_key, handle_value)
             else:
-                excute_method(element_key)
+                excute_method(handle_value)
             if expect_step != None:
                 expect_result = getattr(action_method, expect_step)
                 expect_result(expect_element)

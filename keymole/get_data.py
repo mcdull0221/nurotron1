@@ -48,7 +48,7 @@ class GetData:
 
     def get_expect_handle(self, row):
         expect_step = self.opera_excel.get_cell(row,7)
-        if expect_step == None:
+        if expect_step == "":
             return None
         else:
             return expect_step

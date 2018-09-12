@@ -1,5 +1,4 @@
 import time
-
 __author__ = 'songxiaolin'
 from util.get_by_local import GetByLocal
 from testSet.public.driver import BaseDriver

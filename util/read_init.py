@@ -20,6 +20,7 @@ class ReadIni():
     def read_ini(self):
         read_ini = configparser.ConfigParser()
         read_ini.read(self.file_path)
+        # data = read_ini.read(self.file_path)  data将只是file_path的路径，读取到的内容还在read_ini里。
         return read_ini
 
     def get_value(self, key, section=None):
