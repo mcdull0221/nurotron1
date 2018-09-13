@@ -23,6 +23,9 @@ class MainBusiness:
             self.main_handle.click_map2()
             sleep(1)
             map2 = self.main_handle.get_map2()
-            self.assertIn('已选', map2.text)
+            return map2.text
         else:
-            pass
+            self.main_handle.click_map1()
+            map1 = self.main_handle.get_map1()
+            return map1.text
+

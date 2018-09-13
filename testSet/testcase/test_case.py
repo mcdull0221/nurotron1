@@ -32,7 +32,7 @@ class testcase(ParameTestCase):
         self.assertTrue(scanner_result)
 
     def test_02(self):
-        print('test02'+ str(parames))
+        print('test02' + str(parames))
         self.assertTrue(True)
 
     def tearDown(self):
