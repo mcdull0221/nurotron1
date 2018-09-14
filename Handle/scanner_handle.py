@@ -3,8 +3,9 @@ from page.scanner_page import scannerPage
 
 
 class ScannerHandle:
-    def __init__(self, i):
-        self.scanner_page = scannerPage(i)
+    def __init__(self, driver):
+        self.driver = driver
+        self.scanner_page = scannerPage(driver)
 
     def click_ble_ok(self):
         ''' 提示打开蓝牙弹出框点击确认按钮'''

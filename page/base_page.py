@@ -5,9 +5,10 @@ class BasePage:
     """
     封装页面的公共方法
     """
-    def __init__(self, i):
-        get_driver = BaseDriver()
-        self.driver = get_driver.android_driver(i)
+    def __init__(self, driver):
+        self.driver = driver
+        # get_driver = BaseDriver()
+        # self.driver = get_driver.android_driver(i)
 
     def get_page_source(self):
         """

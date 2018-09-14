@@ -5,8 +5,9 @@ from time import sleep
 
 
 class ScannerBusiness:
-    def __init__(self, i):
-        self.scanner_handle = ScannerHandle(i)
+    def __init__(self, driver):
+        self.driver = driver
+        self.scanner_handle = ScannerHandle(self.driver)
 
     def connect_devices(self):
         try:

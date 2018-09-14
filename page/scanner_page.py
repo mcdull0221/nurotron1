@@ -4,9 +4,10 @@ from util.get_by_local import GetByLocal
 
 
 class scannerPage:
-    def __init__(self, i):
-        self.base_page = BasePage(i)
-        self.driver = self.base_page.driver
+    def __init__(self, driver):
+        self.driver = driver
+        self.base_page = BasePage(self.driver)
+        # self.driver = self.base_page.driver
         self.get_by_local = GetByLocal(self.driver)
 
     def get_bleAlert_ok(self):

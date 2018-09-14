@@ -5,8 +5,9 @@ from time import sleep
 
 
 class MainBusiness:
-    def __init__(self, i):
-        self.main_handle = MainHandle(i)
+    def __init__(self, driver):
+        self.driver = driver
+        self.main_handle = MainHandle(self.driver)
 
     def click_pairing_no(self):
         try:
@@ -18,6 +19,7 @@ class MainBusiness:
             pass
 
     def map_change(self):
+        self.click_pairing_no()
         map1 = self.main_handle.get_map1()
         if map1.text.__contains__('已选'):
             self.main_handle.click_map2()

@@ -3,8 +3,9 @@ from page.main_page import MainPage
 
 
 class MainHandle:
-    def __init__(self, i):
-        self.main_page = MainPage(i)
+    def __init__(self, driver):
+        self.driver = driver
+        self.main_page = MainPage(self.driver)
 
     def click_pairing_no(self):
         """点击 取消蓝牙配对弹框"""

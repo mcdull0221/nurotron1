@@ -21,6 +21,7 @@ class BaseDriver:
             'resetKeyboard': 'true',
             'automationName': 'Uiautomator2',
             'app': 'E:\\app-debug.apk',
+            'noReset': 'true'
         }
         driver = webdriver.Remote('http://localhost:'+str(port)+'/wd/hub', desired_caps)
         time.sleep(10)
