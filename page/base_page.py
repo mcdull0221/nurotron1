@@ -1,5 +1,5 @@
 __author__ = 'songxiaolin'
-from testSet.public.driver import BaseDriver
+
 
 class BasePage:
     """

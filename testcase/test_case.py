@@ -1,10 +1,10 @@
-import threading
-from testSet.public.driver import BaseDriver
+import sys
+sys.path.append("E:/pythonProject/appiumTest/nurotron")
+from public.driver import BaseDriver
 import time
 import multiprocessing
 from business.scanner_business import ScannerBusiness
 from business.main_business import MainBusiness
-from appium import webdriver
 import HTMLTestRunner
 import unittest
 from util.server import Server
@@ -55,6 +55,11 @@ def appium_init():
     server.main()
 
 
+def stop_appium():
+    server = Server()
+    server.kill_server()
+
+
 def get_suite(i):
     print("get_suite里的"+str(i))
     suite = unittest.TestSuite()
@@ -87,4 +92,4 @@ if __name__ == '__main__':
     for j in threads:
         j.start()
         time.sleep(1)
-
+    stop_appium()
