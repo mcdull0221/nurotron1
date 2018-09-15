@@ -47,7 +47,7 @@ class testcase(ParameTestCase):
     @classmethod
     def tearDownClass(cls):
         print('tear down class')
-        # cls.driver.quit()
+        cls.driver.quit()
 
 
 def appium_init():

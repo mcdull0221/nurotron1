@@ -9,8 +9,9 @@ read_ini.read('E:/pythonProject/appiumTest/nurotron/config/localElement.ini')
 print(read_ini.get('connect_element','username'))
 '''
 
-class ReadIni():
-    def __init__(self,file_path= None):
+
+class ReadIni:
+    def __init__(self, file_path= None):
         if file_path == None:
             self.file_path = 'E:/pythonProject/appiumTest/nurotron/config/localElement.ini'
         else:
@@ -32,7 +33,9 @@ class ReadIni():
             value = None
         return value
 
+
 if __name__ == '__main__':
     read_ini = ReadIni()
-
+    read = read_ini.get_value('pairingNO','mainpage_element')
+    print(read)
 

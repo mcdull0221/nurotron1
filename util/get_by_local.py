@@ -6,9 +6,9 @@ class GetByLocal:
     def __init__(self, driver):
         self.driver = driver
 
-    def get_element(self, key):
+    def get_element(self, key, section=None):
         read_ini = ReadIni()
-        local = read_ini.get_value(key)
+        local = read_ini.get_value(key, section)
         if local != None:
             # split()通过指定分隔符对字符串进行切片
             by = local.split('>')[0]
@@ -21,3 +21,5 @@ class GetByLocal:
                 return self.driver.find_element_by_xpath(local_by)
         else:
             return None
+
+

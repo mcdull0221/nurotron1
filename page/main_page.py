@@ -10,95 +10,98 @@ class MainPage:
         # self.driver = self.base_page.driver
         self.get_by_local = GetByLocal(self.driver)
 
+    def get_element(self, key, section='mainpage_element'):
+        return self.get_by_local.get_element(key, section)
+
     def pairing_no(self):
-        return self.get_by_local.get_element('pairingNO')
+        return self.get_element('pairingNO')
 
     def map1(self):
-        return self.get_by_local.get_element('map1')
+        return self.get_element('map1')
 
     def map2(self):
-        return self.get_by_local.get_element('map2')
+        return self.get_element('map2')
 
     def map3(self):
-        return self.get_by_local.get_element('map3')
+        return self.get_element('map3')
 
     def map4(self):
-        return self.get_by_local.get_element('map4')
+        return self.get_element('map4')
 
     def volume(self):
-        return self.get_by_local.get_element('volume')
+        return self.get_element('volume')
 
     def volume_sub(self):
-        return self.get_by_local.get_element('volumeSub')
+        return self.get_element('volumeSub')
 
     def volume_add(self):
-        return self.get_by_local.get_element('volumeAdd')
+        return self.get_element('volumeAdd')
 
     def action_icon(self):
-        return self.get_by_local.get_element('actionIcon')
+        return self.get_element('actionIcon')
 
     def map_name(self):
-        return self.get_by_local.get_element('mapName')
+        return self.get_element('mapName')
 
     def mode_rich(self):
-        return self.get_by_local.get_element('modeRich')
+        return self.get_element('modeRich')
 
     def mode_normal(self):
-        return self.get_by_local.get_element('modeNormal')
+        return self.get_element('modeNormal')
 
     def mic_or_aux(self):
-        return self.get_by_local.get_element('mic/aux')
+        return self.get_element('mic/aux')
 
     def mic_and_aux(self):
-        return self.get_by_local.get_element('mic+aux')
+        return self.get_element('mic+aux')
 
     def mic_and_tcoil(self):
-        return self.get_by_local.get_element('mic+tcoil')
+        return self.get_element('mic+tcoil')
 
     def blue(self):
-        return self.get_by_local.get_element('blue')
+        return self.get_element('blue')
 
     def ctone_on(self):
-        return self.get_by_local.get_element('ctoneON')
+        return self.get_element('ctoneON')
 
     def ctone_off(self):
-        return self.get_by_local.get_element('ctoneOFF')
+        return self.get_element('ctoneOFF')
 
     def noise_on(self):
-        return self.get_by_local.get_element('noiseON')
+        return self.get_element('noiseON')
 
     def noise_off(self):
-        return self.get_by_local.get_element('noiseOFF')
+        return self.get_element('noiseOFF')
 
     def input_ratio2(self):
-        return self.get_by_local.get_element('inputratio2')
+        return self.get_element('inputratio2')
 
     def input_ratio3(self):
-        return self.get_by_local.get_element('inputratio3')
+        return self.get_element('inputratio3')
 
     def input_ratio5(self):
-        return self.get_by_local.get_element('inputratio5')
+        return self.get_element('inputratio5')
 
     def input_ratio9(self):
-        return self.get_by_local.get_element('inputratio9')
+        return self.get_element('inputratio9')
 
     def menu(self):
-        return self.get_by_local.get_element('menu')
+        return self.get_element('menu')
 
     def setting(self):
-        return self.get_by_local.get_element('setting')
+        return self.get_element('setting')
 
     def state(self):
-        return self.get_by_local.get_element('state')
+        return self.get_element('state')
 
     def location(self):
-        return self.get_by_local.get_element('location')
+        return self.get_element('location')
 
     def log(self):
-        return self.get_by_local.get_element('log')
+        return self.get_element('log')
 
     def about(self):
-        return self.get_by_local.get_element('about')
+        return self.get_element('about')
 
     def get_page_source(self):
         """获取页面所有元素"""
@@ -110,3 +113,5 @@ class MainPage:
 
     def swipe_right(self):
         self.base_page.swipe_right()
+
+
