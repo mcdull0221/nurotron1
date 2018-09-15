@@ -64,9 +64,10 @@ class Server:
         如果已安装，则卸载
         :return:
         """
+        package = 'com.nurotron.ble_ui'
         apk_list = self.dos.excute_cmd_result('adb shell pm list packages')
-        if 'package:com.nurotron.ble_ui' in apk_list:
-            self.dos.excute_cmd('adb uninstall com.nurotron.ble_ui')
+        if 'package:'+package in apk_list:
+            self.dos.excute_cmd('adb uninstall '+package)
         else:
             print('no apk')
 
@@ -114,4 +115,5 @@ if __name__ == '__main__':
     server = Server()
     # print(server.get_devices())
     # print(server.create_command_list())
-    print(server.main())
+    # print(server.main())
+    server.uninstall_apk()
