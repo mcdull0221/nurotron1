@@ -1,11 +1,14 @@
 import logging
-
 __author__ = 'songxiaolin'
 from util.dos_cmd import DosCmd
 from util.port import Port
 import threading
 from util.write_user_command import WriteUserCommand
 import time
+import sys,os
+PATH = lambda p: os.path.abspath(
+    os.path.join(os.path.dirname(__file__), p)
+)
 
 
 class Server:
@@ -52,7 +55,7 @@ class Server:
         bootstrap_port_list = self.create_port_list(4900)
         device_list = self.device_list
         # for i in range(len(device_list)):
-        commend = "appium -p "+str(appium_port_list[i])+" -bp "+str(bootstrap_port_list[i])+" -U "+device_list[i]+" --no-reset --session-override --log E:/pythonProject/appiumTest/nurotron/result/log/test01.log"
+        commend = "appium -p "+str(appium_port_list[i])+" -bp "+str(bootstrap_port_list[i])+" -U "+device_list[i]+" --no-reset --session-override --log "+PATH("../result/log/test01.log")
         command_list.append(commend)
         #调用write_data方法将参数写人yaml文件中
         self.write_file.write_data(i, device_list[i], bootstrap_port_list[i], appium_port_list[i])

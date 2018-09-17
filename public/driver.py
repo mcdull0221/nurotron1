@@ -2,6 +2,12 @@ __author__ = 'songxiaolin'
 from appium import webdriver
 import time
 from util.write_user_command import WriteUserCommand
+import sys,os
+PATH = lambda p: os.path.abspath(
+    os.path.join(os.path.dirname(__file__), p)
+)
+
+
 
 
 class BaseDriver:
@@ -20,7 +26,8 @@ class BaseDriver:
             'unicodeKeyboard': 'true',
             'resetKeyboard': 'true',
             'automationName': 'Uiautomator2',
-            'app': 'E:\\app-debug.apk',
+            # 'app': 'E:\\pythonProject\\appiumTest\\nurotron\APP\\app-debug.apk',
+            'app': PATH('../app/app-debug.apk'),
             'noReset': 'true'
         }
         driver = webdriver.Remote('http://localhost:'+str(port)+'/wd/hub', desired_caps)

@@ -1,5 +1,7 @@
 __author__ = 'songxiaolin'
 from util.dos_cmd import DosCmd
+
+
 class Port:
     '''
     检查端口是否被暂用
@@ -23,16 +25,16 @@ class Port:
         :param device_list: 获取到的设备数
         :return:根据设备数返回一个可用端口的列表
         '''
-        port_list =[]
-        if device_list != None:
+        port_list = []
+        if device_list is not None:
             while len(port_list) != len(device_list):
-                if self.port_is_used(start_port) != True:
+                if self.port_is_used(start_port) is not True:
                     port_list.append(start_port)
                 start_port = start_port + 1
             return port_list
         else:
-            return None
             print("生成可用端口失败")
+            return None
 
 
 if __name__ == '__main__':

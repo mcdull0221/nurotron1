@@ -1,5 +1,9 @@
 __author__ = 'songxiaolin'
 import configparser
+import sys,os
+PATH = lambda p: os.path.abspath(
+    os.path.join(os.path.dirname(__file__), p)
+)
 
 '''
 read_ini = configparser.ConfigParser()
@@ -12,10 +16,11 @@ print(read_ini.get('connect_element','username'))
 
 class ReadIni:
     def __init__(self, file_path= None):
-        if file_path == None:
-            self.file_path = 'E:/pythonProject/appiumTest/nurotron/config/localElement.ini'
+        if file_path is None:
+            # self.file_path = 'E:/pythonProject/appiumTest/nurotron/config/localElement.ini'
+            self.file_path = PATH('../config/localElement.ini')
         else:
-            self.file_path =file_path
+            self.file_path = file_path
         self.data = self.read_ini()
 
     def read_ini(self):
@@ -25,7 +30,7 @@ class ReadIni:
         return read_ini
 
     def get_value(self, key, section=None):
-        if section == None:
+        if section is None:
             section = 'connect_element'
         try:
             value = self.data.get(section, key)
@@ -36,6 +41,6 @@ class ReadIni:
 
 if __name__ == '__main__':
     read_ini = ReadIni()
-    read = read_ini.get_value('pairingNO','mainpage_element')
+    read = read_ini.get_value('pairingNO', 'mainpage_element')
     print(read)
 

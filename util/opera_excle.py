@@ -1,11 +1,15 @@
 __author__ = 'songxiaolin'
 import xlrd
+import sys, os
+PATH = lambda p: os.path.abspath(
+    os.path.join(os.path.dirname(__file__), p)
+)
 
 
 class OperaExcel:
     def __init__(self, file_path=None, i=None):
         if file_path is None:
-            self.file_path = "E:/pythonProject/appiumTest/nurotron/config/case.xlsx"
+            self.file_path = PATH("../config/case.xlsx")
         else:
             self.file_path = file_path
         if i is None:

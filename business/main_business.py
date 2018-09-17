@@ -20,6 +20,7 @@ class MainBusiness:
 
     def map_change(self):
         self.click_pairing_no()
+        sleep(2)
         map1 = self.main_handle.get_map1()
         if map1.text.__contains__('已选'):
             self.main_handle.click_map2()

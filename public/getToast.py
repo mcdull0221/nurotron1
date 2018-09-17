@@ -26,8 +26,9 @@ def get_Toast(self, message):  # 查找toast值
         message = '//*[@text=\'{}\']'.format(message)
         ele = WebDriverWait(self.driver, 10, 0.1).until(
             expected_conditions.presence_of_element_located((By.XPATH, message)))
-        return ele.get_attribute("text")
         logging.info("查找到toast----%s" % message)
+        return ele.get_attribute("text")
+
     except:
         logging.error("未查找到toast----%s" % message)
         return False
