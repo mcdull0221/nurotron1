@@ -1,3 +1,8 @@
+import sys
+import os
+curpath = os.path.abspath(os.path.dirname(__file__))
+rootpath = os.path.split(curpath)[0]
+sys.path.append(rootpath)
 from public.driver import BaseDriver
 import time
 import multiprocessing
@@ -7,8 +12,6 @@ import HTMLTestRunner
 import unittest
 from util.server import Server
 from util.write_user_command import WriteUserCommand
-import sys, os
-sys.path.append("E:/pythonProject/appiumTest/nurotron")
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
 )
