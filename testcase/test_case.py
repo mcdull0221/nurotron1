@@ -70,7 +70,7 @@ def get_suite(i):
     suite.addTest(testcase('test_02', parame=i))
     # unittest.TextTestRunner().run(suite)
     now = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
-    html_file = PATH("../result/report/") + now + "report"+str(i) +".html"
+    html_file = PATH("../result/report/") + "\\" + now + "report"+str(i) + ".html"
     fp = open(html_file, "wb")
     HTMLTestRunner.HTMLTestRunner(stream=fp, title='APP测试报告', description='用例执行情况').run(suite)
     fp.close()

@@ -8,9 +8,10 @@ PATH = lambda p: os.path.abspath(
 
 
 class WriteUserCommand:
-    def path(self):
-        print(os.getcwd())
-        print(PATH("../config/userConfig.yaml"))
+    # def path(self):
+    #     print(os.getcwd())
+    #     print(PATH("../config/userConfig.yaml"))
+    #     print(PATH("../result/report/"))
 
     def read_data(self):
         """
