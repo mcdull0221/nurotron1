@@ -345,3 +345,4 @@
 2018-09-17 05:38:56:328 - info: [debug] [W3C] Responding to client with driver.deleteSession() result: null
 2018-09-17 05:38:56:328 - info: [HTTP] <-- DELETE /wd/hub/session/736b0474-d1d0-4216-b34e-1282987ba40e 200 2362 ms - 14
 2018-09-17 05:38:56:328 - info: [HTTP] 
+2018-09-17 05:44:31:214 - info: [Appium] Received SIGINT - shutting down
