@@ -51,7 +51,10 @@ class testcase(ParameTestCase):
         print('tear down')
         # 捕获异常，失败时截图
         if sys.exc_info()[0]:
-            self.driver.save_screenshot(PATH('../result/screenshot/screenshot01.png'))
+            # self.driver.save_screenshot(PATH('../result/screenshot/screenshot01.png'))
+            now = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
+            png_file = PATH("../result/screenshots/") + "\\" + now + "driver" + str(parames) + ".png"
+            self.driver.save_screenshot(png_file)
 
     @classmethod
     def tearDownClass(cls):

@@ -1,6 +1,7 @@
 __author__ = 'songxiaolin'
 import yaml
 import os, sys
+import time
 
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
@@ -12,6 +13,9 @@ class WriteUserCommand:
     #     print(os.getcwd())
     #     print(PATH("../config/userConfig.yaml"))
     #     print(PATH("../result/report/"))
+    #     now = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
+    #     png_file = PATH("../result/screenshots/") + "\\" + now + "driver" + str(0) + ".png"
+    #     print(png_file)
 
     def read_data(self):
         """

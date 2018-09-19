@@ -12,4 +12,11 @@ class screenShot():
     # 获取时间戳
     def getTime(self):
         tamp = int(time.time())
-        return tamp
+        now = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
+        return now
+
+
+if __name__ == '__main__':
+    screen_shot = screenShot()
+    now = screen_shot.getTime()
+    print(now)
