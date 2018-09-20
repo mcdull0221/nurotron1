@@ -31,13 +31,13 @@ class MainBusiness:
         #     self.main_handle.click_map1()
         #     map1 = self.main_handle.get_map1()
         #     return map1.text
-        map1_sel = self.main_handle.get_map1()
+        map1_sel = self.main_handle.get_map1().is_selected()
         if map1_sel is True:
             self.main_handle.click_map2()
             sleep(1)
-            map2_sel = self.main_handle.get_map2()
+            map2_sel = self.main_handle.get_map2().is_selected()
             return map2_sel
         else:
             self.main_handle.click_map1()
-            map1_sel = self.main_handle.get_map1()
+            map1_sel = self.main_handle.get_map1().is_selected()
             return map1_sel
