@@ -45,7 +45,7 @@ class testcase(ParameTestCase):
         print('this is test 2')
         self.main_business = MainBusiness(self.driver)
         map_change = self.main_business.map_change()
-        self.assertIn('已选', map_change)
+        self.assertTrue(map_change)
 
     def tearDown(self):
         print('tear down')

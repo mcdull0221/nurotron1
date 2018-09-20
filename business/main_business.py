@@ -21,14 +21,23 @@ class MainBusiness:
     def map_change(self):
         self.click_pairing_no()
         sleep(2)
-        map1 = self.main_handle.get_map1()
-        if map1.text.__contains__('已选'):
+        # map1 = self.main_handle.get_map1()
+        # if map1.text.__contains__('已选'):
+        #     self.main_handle.click_map2()
+        #     sleep(1)
+        #     map2 = self.main_handle.get_map2()
+        #     return map2.text
+        # else:
+        #     self.main_handle.click_map1()
+        #     map1 = self.main_handle.get_map1()
+        #     return map1.text
+        map1_sel = self.main_handle.get_map1()
+        if map1_sel is True:
             self.main_handle.click_map2()
             sleep(1)
-            map2 = self.main_handle.get_map2()
-            return map2.text
+            map2_sel = self.main_handle.get_map2()
+            return map2_sel
         else:
             self.main_handle.click_map1()
-            map1 = self.main_handle.get_map1()
-            return map1.text
-
+            map1_sel = self.main_handle.get_map1()
+            return map1_sel
