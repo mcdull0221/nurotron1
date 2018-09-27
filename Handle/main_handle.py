@@ -59,6 +59,10 @@ class MainHandle:
         """发送程序名称"""
         self.main_page.map_name().send_keys(name)
 
+    def clear_map_name(self):
+        """发送程序名称"""
+        self.main_page.map_name().clear()
+
     def click_mode_rich(self):
         """点击 丰富模式"""
         self.main_page.mode_rich().click()
@@ -116,11 +120,11 @@ class MainHandle:
         self.main_page.menu().click()
 
     def click_setting(self):
-        """点击 点击侧边栏的定位"""
+        """点击 点击侧边栏的设置"""
         self.main_page.setting().click()
 
     def click_state(self):
-        """点击 点击侧边栏的定位"""
+        """点击 点击侧边栏的状态"""
         self.main_page.state().click()
 
     def click_location(self):
@@ -134,6 +138,18 @@ class MainHandle:
     def click_about(self):
         """点击 侧边栏的关于"""
         self.main_page.about().click()
+
+    def click_autoswitch(self):
+        """点击 场景识别手动还是自动选项"""
+        self.main_page.autoswitch().click()
+
+    def click_scene_on(self):
+        """点击 打开场景识别"""
+        self.main_page.sceneON().click()
+
+    def click_scene_off(self):
+        """点击 关闭场景识别"""
+        self.main_page.sceneON().click()
 
     def swipe_left(self):
         self.main_page.swipe_left()

@@ -1,3 +1,5 @@
+import random
+
 __author__ = 'songxiaolin'
 import logging
 from Handle.main_handle import MainHandle
@@ -41,3 +43,49 @@ class MainBusiness:
             self.main_handle.click_map1()
             map1_sel = self.main_handle.get_map1().is_selected()
             return map1_sel
+
+    def vol_add(self):
+        vol = self.main_handle.get_volume().text
+        print('当前音量：'+vol)
+        if vol is None:
+            logging.error('未发现音量')
+            return
+        else:
+            for i in range(int(vol), 14):
+                self.main_handle.click_volume_add()
+                sleep(1)
+        vol_now = self.main_handle.get_volume().text
+        return int(vol_now)
+
+    def vol_sub(self):
+        vol = self.main_handle.get_volume().text
+        if vol is None:
+            logging.error('未发现音量')
+            return
+        else:
+            for i in range(1, 14):
+                self.main_handle.click_volume_sub()
+                sleep(1)
+        vol_now = self.main_handle.get_volume().text
+        return int(vol_now)
+
+    def change_map_name(self):
+        # 从预选里 随机选取10个字符
+        name = random.sample('zxcvbnm,./asdfghjkl;qwertyuiop[]1234567890一二三四五六七八九十', 10)
+        '''
+                name 里面输出的是一个list
+                要转化为字符串才能和map名称对比,使用下面的方法
+                str = ''
+                str.join(name)
+         '''
+        str = ''
+        map_name = str.join(name)
+        print(map_name)
+        self.main_handle.send_map_name(map_name)
+        sleep(1)
+        self.main_handle.swipe_left()
+
+
+if __name__ == '__main__':
+    main_business = MainBusiness(0)
+    main_business.change_map_name()

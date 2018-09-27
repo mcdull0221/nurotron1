@@ -9,7 +9,7 @@ class GetByLocal:
     def get_element(self, key, section=None):
         read_ini = ReadIni()
         local = read_ini.get_value(key, section)
-        if local != None:
+        if local is not None:
             # split()通过指定分隔符对字符串进行切片
             by = local.split('>')[0]
             local_by = local.split('>')[1]

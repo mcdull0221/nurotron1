@@ -27,28 +27,38 @@ class ParameTestCase(unittest.TestCase):
 class testcase(ParameTestCase):
     @classmethod
     def setUpClass(cls):
-        print("setUpclass---->", str(parames))
+        # print("setUpclass---->", str(parames))
         get_driver = BaseDriver()
         cls.driver = get_driver.android_driver(parames)
+        cls.scanner_business = ScannerBusiness(cls.driver)
+        cls.main_business = MainBusiness(cls.driver)
 
     def setUp(self):
-        print('set up'+str(parames))
+        # print('set up'+str(parames))
         pass
 
-    def test_01(self):
-        self.scanner_business = ScannerBusiness(self.driver)
+    def test_connect_01(self):
+        # self.scanner_business = ScannerBusiness(self.driver)
         scanner_result = self.scanner_business.devices_found
         # print('test01'+str(parames))
         self.assertTrue(scanner_result)
 
-    def test_02(self):
-        print('this is test 2')
-        self.main_business = MainBusiness(self.driver)
+    def test_changemap_02(self):
+        # print('this is test 2')
+        # self.main_business = MainBusiness(self.driver)
         map_change = self.main_business.map_change()
         self.assertTrue(map_change)
 
+    def test_vol_add_03(self):
+        vol_add = self.main_business.vol_add()
+        self.assertEqual(12, vol_add)
+
+    def test_vol_sub_04(self):
+        vol_sub = self.main_business.vol_sub()
+        self.assertEqual(1, vol_sub)
+
     def tearDown(self):
-        print('tear down')
+        # print('tear down')
         # 捕获异常，失败时截图
         if sys.exc_info()[0]:
             # self.driver.save_screenshot(PATH('../result/screenshot/screenshot01.png'))
@@ -75,8 +85,10 @@ def stop_appium():
 def get_suite(i):
     print("get_suite里的"+str(i))
     suite = unittest.TestSuite()
-    suite.addTest(testcase('test_01', parame=i))
-    suite.addTest(testcase('test_02', parame=i))
+    suite.addTest(testcase('test_connect_01', parame=i))
+    suite.addTest(testcase('test_changemap_02', parame=i))
+    suite.addTest(testcase('test_vol_add_03', parame=i))
+    suite.addTest(testcase('test_vol_sub_04', parame=i))
     # unittest.TextTestRunner().run(suite)
     now = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
     html_file = PATH("../result/report/") + "\\" + now + "report"+str(i) + ".html"
@@ -97,7 +109,7 @@ if __name__ == '__main__':
     appium_init()
     threads = []
     for i in range(get_count()):
-        print("i = " + str(i))
+        # print("i = " + str(i))
         # t = threading.Thread(target=get_suite, args=(i,)) 多线程启动
         t = multiprocessing.Process(target=get_suite, args=(i,))    # 多进程启动
         threads.append(t)

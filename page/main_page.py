@@ -103,6 +103,15 @@ class MainPage:
     def about(self):
         return self.get_element('about')
 
+    def autoswitch(self):
+        return self.get_element('autoswitch')
+
+    def sceneON(self):
+        return self.get_element('sceneON')
+
+    def sceneOFF(self):
+        return self.get_element('sceneOFF')
+
     def get_page_source(self):
         """获取页面所有元素"""
         page_source = self.base_page.get_page_source()
