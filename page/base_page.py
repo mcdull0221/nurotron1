@@ -1,5 +1,7 @@
 __author__ = 'songxiaolin'
-
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.ui import WebDriverWait
 
 class BasePage:
     """
@@ -47,6 +49,16 @@ class BasePage:
         y1 = self.get_size()[1] / 10 * 2
         y2 = self.get_size()[0] / 10 * 9
         self.driver.swipe(x1, y1, x1, y2, 1000)
+
+    def get_toast_element(self, message):
+        '''
+        获取tostelement
+        '''
+        toast_element = ("xpath", "//*[contains(@text," + message + ")]")
+        toast = WebDriverWait(self.driver, 10, 0.1).until(
+            expected_conditions.presence_of_element_located(toast_element))
+        return toast
+
 
 if __name__ == '__main__':
     base_page = BasePage(0)
