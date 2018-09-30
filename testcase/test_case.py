@@ -8,6 +8,7 @@ import time
 import multiprocessing
 from business.scanner_business import ScannerBusiness
 from business.main_business import MainBusiness
+from business.login_business import LoginBusiness
 import HTMLTestRunner
 import unittest
 from util.server import Server
@@ -32,10 +33,16 @@ class testcase(ParameTestCase):
         cls.driver = get_driver.android_driver(parames)
         cls.scanner_business = ScannerBusiness(cls.driver)
         cls.main_business = MainBusiness(cls.driver)
+        cls.login_business = LoginBusiness(cls.driver)
 
     def setUp(self):
         # print('set up'+str(parames))
         pass
+
+    def test_login_00(self):
+        login_fail = self.login_business.login_user_error()
+        login_success = self.login_business.login_success()
+        self.assertNotEqual(login_fail, login_success)
 
     def test_connect_01(self):
         # self.scanner_business = ScannerBusiness(self.driver)
@@ -85,6 +92,7 @@ def stop_appium():
 def get_suite(i):
     print("get_suite里的"+str(i))
     suite = unittest.TestSuite()
+    suite.addTest(testcase('test_login_00', parame=i))
     suite.addTest(testcase('test_connect_01', parame=i))
     suite.addTest(testcase('test_changemap_02', parame=i))
     suite.addTest(testcase('test_vol_add_03', parame=i))

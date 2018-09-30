@@ -34,3 +34,9 @@ class LoginPage:
     def toast_element(self, message):
         toast = self.base_page.get_toast_element(message)
         return toast
+
+    def get_message(self):
+        self.get_element('unlock_pattern_message')
+
+    def unlock_pattern_no(self):
+        self.get_element('unlock_pattern_no')

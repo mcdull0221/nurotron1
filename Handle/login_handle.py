@@ -29,3 +29,10 @@ class LoginHandle:
             return True
         else:
             return False
+
+    def get_message(self):
+        message = self.login_page.get_message().text()
+        return message
+
+    def click_unlock_pattern_no(self):
+        self.login_page.unlock_pattern_no().click()
