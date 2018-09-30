@@ -47,11 +47,9 @@ class testcase(ParameTestCase):
     def test_connect_01(self):
         # self.scanner_business = ScannerBusiness(self.driver)
         scanner_result = self.scanner_business.devices_found
-        # print('test01'+str(parames))
         self.assertTrue(scanner_result)
 
     def test_changemap_02(self):
-        # print('this is test 2')
         # self.main_business = MainBusiness(self.driver)
         map_change = self.main_business.map_change()
         self.assertTrue(map_change)

@@ -26,15 +26,15 @@ class ScannerBusiness:
         self.connect_devices()
         for i in range(1, 11):
             sleep(10)
-            if self.scanner_handle.chack_page_source("00:02:5B") == True:
+            if self.scanner_handle.chack_page_source("00:02:5B") is True:
                 self.scanner_handle.click_driver()
                 sleep(2)
                 self.scanner_handle.click_driver_ok()
                 return True
-            elif self.scanner_handle.chack_page_source("设备查找中") == True:
+            elif self.scanner_handle.chack_page_source("设备查找中") is True:
                 logging.info("设备查找中")
                 sleep(5)
-            elif self.scanner_handle.chack_page_source("下拉重新扫描") == True:
+            elif self.scanner_handle.chack_page_source("下拉重新扫描") is True:
                 logging.info("下拉重新扫描")
                 self.scanner_handle.swipe_down()
                 sleep(1)

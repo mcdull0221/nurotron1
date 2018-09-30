@@ -47,12 +47,14 @@ class GetData:
             return False
 
     def get_expect_handle(self, row):
-        expect_step = self.opera_excel.get_cell(row,7)
+        expect_step = self.opera_excel.get_cell(row, 7)
         if expect_step == "":
             return None
         else:
             return expect_step
 
+    def write_value(self, row, value):
+        self.opera_excel.write_value(row, value)
 
 if __name__ == '__main__':
     get = GetData()

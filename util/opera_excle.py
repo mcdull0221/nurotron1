@@ -1,5 +1,6 @@
 __author__ = 'songxiaolin'
 import xlrd
+from xlutils.copy import copy
 import sys, os
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
@@ -9,7 +10,7 @@ PATH = lambda p: os.path.abspath(
 class OperaExcel:
     def __init__(self, file_path=None, i=None):
         if file_path is None:
-            self.file_path = PATH("../config/case.xlsx")
+            self.file_path = PATH("../config/case.xls")
         else:
             self.file_path = file_path
         if i is None:
@@ -40,7 +41,15 @@ class OperaExcel:
         data = self.data.cell(row, cell).value
         return data
 
+    def write_value(self, row, value):
+        read_vale = self.excel
+        write_data = copy(read_vale)
+        write_save = write_data.get_sheet(0)
+        write_save.write(row, 9, value)
+        write_data.save(self.file_path)
+
 
 if __name__ == "__main__":
     opera = OperaExcel()
     print(opera.get_cell(1, 2))
+    print(opera.write_value(6, 'pass'))
