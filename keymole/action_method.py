@@ -28,7 +28,7 @@ class ActionMethod:
         element.click()
 
     def sleep_time(self, *args):
-        time.sleep(*args[0])
+        time.sleep(int(args[0]))
 
     def get_size(self):
         size = self.driver.get_window_size()

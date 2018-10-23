@@ -1,4 +1,8 @@
-# coding=utf-8
+import sys
+import os
+curpath = os.path.abspath(os.path.dirname(__file__))
+rootpath = os.path.split(curpath)[0]
+sys.path.append(rootpath)
 from keymole.get_data import GetData
 from keymole.action_method import ActionMethod
 from util.server import Server

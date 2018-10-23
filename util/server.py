@@ -86,11 +86,11 @@ class Server:
         # 启动多个线程时，用i会报错，因为start_list里面只有一个元素。
 
     def kill_server(self):
-        '''
+        """
         cmd查找有无进程 tasklist | find "***.exe"
         cmd终止程序 taskkill | -F -PID ***.exe
         :return:
-        '''
+        """
         server_list = self.dos.excute_cmd_result('tasklist | find "node.exe"')
         if len(server_list) > 0:
             self.dos.excute_cmd('taskkill | -F -PID node.exe')
@@ -103,7 +103,7 @@ class Server:
         :return:
         """
         thread_list = []
-        self.uninstall_apk()
+        # self.uninstall_apk()
         self.kill_server()
         self.write_file.clear_data()
         for i in range(len(self.device_list)):

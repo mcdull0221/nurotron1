@@ -31,7 +31,7 @@ class ReadIni:
 
     def get_value(self, key, section=None):
         if section is None:
-            section = 'connect_element'
+            section = 'login_element'
         try:
             value = self.data.get(section, key)
         except:
