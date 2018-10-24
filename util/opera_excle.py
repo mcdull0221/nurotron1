@@ -16,7 +16,6 @@ class OperaExcel:
         if i is None:
             self.i = 0
 
-        self.excel = self.get_excel()
         self.data = self.get_sheet(self.i)
 
     def get_excel(self):
@@ -29,7 +28,8 @@ class OperaExcel:
 
     def get_sheet(self, i):
         """获取sheet"""
-        table = self.excel.sheets()[i]
+        excel = self.get_excel()
+        table = excel.sheets()[i]
         return table
 
     def get_lines(self):
@@ -42,7 +42,7 @@ class OperaExcel:
         return data
 
     def write_value(self, row, value):
-        read_vale = self.excel
+        read_vale = self.get_excel()
         write_data = copy(read_vale)
         write_save = write_data.get_sheet(0)
         write_save.write(row, 9, value)

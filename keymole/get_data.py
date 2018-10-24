@@ -27,21 +27,21 @@ class GetData:
 
     def get_handle_value(self, row):
         """获取操作值"""
-        handle_value =  self.opera_excel.get_cell(row, 5)
+        handle_value = self.opera_excel.get_cell(row, 5)
         if handle_value == '':
             return None
         return handle_value
 
     def get_expect_element(self, row):
         """获取预期结果元素"""
-        expect_element =  self.opera_excel.get_cell(row, 6)
+        expect_element = self.opera_excel.get_cell(row, 6)
         if expect_element == '':
             return None
         return expect_element
 
     def get_is_run(self, row):
         is_run = self.opera_excel.get_cell(row, 8)
-        if is_run =="yes":
+        if is_run == "yes":
             return True
         else:
             return False
@@ -56,6 +56,15 @@ class GetData:
     def write_value(self, row, value):
         self.opera_excel.write_value(row, value)
 
+    def get_operate_page(self, row):
+        """获取操作element所在的页面"""
+        operate_page = self.opera_excel.get_cell(row, 1)
+        if operate_page == '':
+            return None
+        else:
+            return operate_page
+
 if __name__ == '__main__':
     get = GetData()
-    print(get.get_element_key(6))
+    print(get.get_operate_page(2))
+    get.write_value(2, "PASS")

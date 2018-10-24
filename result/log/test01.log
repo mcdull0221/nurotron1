@@ -1,316 +1,356 @@
-2018-10-22 06:37:02:672 - info: [Appium] Welcome to Appium v1.8.1
-2018-10-22 06:37:02:674 - info: [Appium] Non-default server args:
-2018-10-22 06:37:02:675 - info: [Appium]   bootstrapPort: 4900
-2018-10-22 06:37:02:675 - info: [Appium]   sessionOverride: true
-2018-10-22 06:37:02:675 - info: [Appium]   log: E:\pythonProject\appiumTest\nurotron\result\log\test01.log
-2018-10-22 06:37:02:675 - info: [Appium]   udid: 298384e47d74
-2018-10-22 06:37:02:676 - info: [Appium]   noReset: true
-2018-10-22 06:37:02:676 - warn: [Appium] Deprecated server args:
-2018-10-22 06:37:02:677 - warn: [Appium]   -U,--udid => --default-capabilities '{"udid":"298384e47d74"}'
-2018-10-22 06:37:02:677 - warn: [Appium]   --no-reset => --default-capabilities '{"noReset":true}'
-2018-10-22 06:37:02:677 - info: [Appium] Default capabilities, which will be added to each request unless overridden by desired capabilities:
-2018-10-22 06:37:02:677 - info: [Appium]   udid: 298384e47d74
-2018-10-22 06:37:02:677 - info: [Appium]   noReset: true
-2018-10-22 06:37:02:724 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:4723
-2018-10-22 06:37:25:359 - info: [HTTP] --> POST /wd/hub/session
-2018-10-22 06:37:25:360 - info: [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"platformName":"Android","appium:deviceName":"298384e47d74","appium:autoGrantPermissions":"true","appium:unicodeKeyboard":"true","appium:resetKeyboard":"true","appium:automationName":"Uiautomator2","appium:app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk","appium:noReset":"true"}},"desiredCapabilities":{"platformName":"Android","deviceName":"298384e47d74","autoGrantPermissions":"true","unicodeKeyboard":"true","resetKeyboard":"true","automationName":"Uiautomator2","app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk","noReset":"true"}}
-2018-10-22 06:37:25:363 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"platformName":"Android","deviceName":"298384e47d74","autoGrantPermissions":"true","unicodeKeyboard":"true","resetKeyboard":"true","automationName":"Uiautomator2","app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk","noReset":"true"},null,{"firstMatch":[{}],"alwaysMatch":{"platformName":"Android","appium:deviceName":"298384e47d74","appium:autoGrantPermissions":"true","appium:unicodeKeyboard":"true","appium:resetKeyboard":"true","appium:automationName":"Uiautomator2","appium:app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk","appium:noReset":"true"}}]
-2018-10-22 06:37:25:364 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1540190245364 (14:37:25 GMT+0800 (中国标准时间))
-2018-10-22 06:37:25:368 - warn: [BaseDriver] The capabilities ["udid","noReset"] are not standard capabilities and should have an extension prefix
-2018-10-22 06:37:25:371 - warn: [BaseDriver] Boolean capability passed in as string. Functionality may be compromised.
-2018-10-22 06:37:25:374 - info: [Appium] Creating new AndroidUiautomator2Driver (v1.12.0) session
-2018-10-22 06:37:25:375 - info: [Appium] Capabilities:
-2018-10-22 06:37:25:375 - info: [Appium]   udid: 298384e47d74
-2018-10-22 06:37:25:375 - info: [Appium]   noReset: true
-2018-10-22 06:37:25:375 - info: [Appium]   platformName: Android
-2018-10-22 06:37:25:375 - info: [Appium]   deviceName: 298384e47d74
-2018-10-22 06:37:25:376 - info: [Appium]   autoGrantPermissions: true
-2018-10-22 06:37:25:376 - info: [Appium]   unicodeKeyboard: true
-2018-10-22 06:37:25:376 - info: [Appium]   resetKeyboard: true
-2018-10-22 06:37:25:376 - info: [Appium]   automationName: Uiautomator2
-2018-10-22 06:37:25:376 - info: [Appium]   app: E:\pythonProject\appiumTest\nurotron\app\app-debug.apk
-2018-10-22 06:37:25:381 - info: [debug] [BaseDriver] W3C capabilities {"alwaysMatch":{"appium:udi... and MJSONWP desired capabilities [object Object] were provided
-2018-10-22 06:37:25:381 - info: [debug] [BaseDriver] Creating session with W3C capabilities: {"alwaysMatch":{"appium:udi...
-2018-10-22 06:37:25:384 - warn: [BaseDriver] Boolean capability passed in as string. Functionality may be compromised.
-2018-10-22 06:37:25:384 - warn: [BaseDriver] Boolean capability passed in as string. Functionality may be compromised.
-2018-10-22 06:37:25:384 - warn: [BaseDriver] Boolean capability passed in as string. Functionality may be compromised.
-2018-10-22 06:37:25:385 - warn: [BaseDriver] Boolean capability passed in as string. Functionality may be compromised.
-2018-10-22 06:37:25:388 - warn: [BaseDriver] Capability 'noReset' changed from string to boolean. This may cause unexpected behavior
-2018-10-22 06:37:25:388 - warn: [BaseDriver] Capability 'unicodeKeyboard' changed from string to boolean. This may cause unexpected behavior
-2018-10-22 06:37:25:388 - warn: [BaseDriver] Capability 'resetKeyboard' changed from string to boolean. This may cause unexpected behavior
-2018-10-22 06:37:25:388 - warn: [BaseDriver] Capability 'autoGrantPermissions' changed from string to boolean. This may cause unexpected behavior
-2018-10-22 06:37:25:392 - info: [BaseDriver] Session created with session id: f3540cbc-c922-450c-91b4-1b482009cd14
-2018-10-22 06:37:25:435 - info: [BaseDriver] Using local app 'E:\pythonProject\appiumTest\nurotron\app\app-debug.apk'
-2018-10-22 06:37:25:436 - info: [debug] [UiAutomator2] Checking whether app is actually present
-2018-10-22 06:37:25:842 - info: [debug] [AndroidDriver] Getting Java version
-2018-10-22 06:37:26:003 - info: [AndroidDriver] Java version is: 1.8.0_171
-2018-10-22 06:37:26:007 - info: [ADB] Checking whether adb is present
-2018-10-22 06:37:26:016 - warn: [ADB] Cannot sort build-tools folders ["21.1.1","25.0.0","27.0.3","28.0.0","28.0.1","android-4.4W"] by semantic version names.
-2018-10-22 06:37:26:016 - warn: [ADB] Falling back to sorting by modification date. Original error: Invalid Version: android-4.4W
-2018-10-22 06:37:26:019 - info: [ADB] Found 6 'build-tools' folders under 'D:\SDK\sdk' (newest first):
-2018-10-22 06:37:26:019 - info: [ADB]     D:/SDK/sdk/build-tools/25.0.0
-2018-10-22 06:37:26:020 - info: [ADB]     D:/SDK/sdk/build-tools/28.0.1
-2018-10-22 06:37:26:020 - info: [ADB]     D:/SDK/sdk/build-tools/21.1.1
-2018-10-22 06:37:26:020 - info: [ADB]     D:/SDK/sdk/build-tools/27.0.3
-2018-10-22 06:37:26:020 - info: [ADB]     D:/SDK/sdk/build-tools/28.0.0
-2018-10-22 06:37:26:020 - info: [ADB]     D:/SDK/sdk/build-tools/android-4.4W
-2018-10-22 06:37:26:021 - info: [ADB] Using adb.exe from D:\SDK\sdk\platform-tools\adb.exe
-2018-10-22 06:37:26:021 - info: [AndroidDriver] Retrieving device list
-2018-10-22 06:37:26:022 - info: [debug] [ADB] Trying to find a connected android device
-2018-10-22 06:37:26:023 - info: [debug] [ADB] Getting connected devices...
-2018-10-22 06:37:26:070 - info: [debug] [ADB] 1 device(s) connected
-2018-10-22 06:37:26:071 - info: [AndroidDriver] Using device: 298384e47d74
-2018-10-22 06:37:26:072 - info: [debug] [ADB] Setting device id to 298384e47d74
-2018-10-22 06:37:26:074 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell getprop ro.build.version.sdk'
-2018-10-22 06:37:26:150 - info: [debug] [ADB] Current device property 'ro.build.version.sdk': 25
-2018-10-22 06:37:26:151 - info: [debug] [ADB] Device API level: 25
-2018-10-22 06:37:26:151 - info: [debug] [AndroidDriver] Parsing package and activity from app manifest
-2018-10-22 06:37:26:157 - info: [ADB] Using the alternative activity name detection method because of: Could not find apkanalyzer.bat in D:\SDK\sdk\platform-tools\apkanalyzer.bat,D:\SDK\sdk\emulator\apkanalyzer.bat,D:\SDK\sdk\tools\apkanalyzer.bat,D:\SDK\sdk\tools\bin\apkanalyzer.bat,D:\SDK\sdk\build-tools\25.0.0\apkanalyzer.bat,D:\SDK\sdk\build-tools\28.0.1\apkanalyzer.bat,D:\SDK\sdk\build-tools\21.1.1\apkanalyzer.bat,D:\SDK\sdk\build-tools\27.0.3\apkanalyzer.bat,D:\SDK\sdk\build-tools\28.0.0\apkanalyzer.bat,D:\SDK\sdk\build-tools\android-4.4W\apkanalyzer.bat. Do you have the Android SDK installed at 'D:\SDK\sdk'?
-2018-10-22 06:37:26:158 - info: [ADB] Checking whether aapt is present
-2018-10-22 06:37:26:160 - info: [ADB] Using aapt.exe from D:\SDK\sdk\build-tools\25.0.0\aapt.exe
-2018-10-22 06:37:26:161 - info: [ADB] Extracting package and launch activity from manifest
-2018-10-22 06:37:26:208 - info: [ADB] Package name: 'com.nurotron.ble_ui'
-2018-10-22 06:37:26:209 - info: [ADB] Main activity name: 'com.nurotron.ble_ui.SplashActivity'
-2018-10-22 06:37:26:209 - info: [debug] [AndroidDriver] Parsed package and activity are: com.nurotron.ble_ui/com.nurotron.ble_ui.SplashActivity
-2018-10-22 06:37:26:209 - info: [ADB] Getting device platform version
-2018-10-22 06:37:26:210 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell getprop ro.build.version.release'
-2018-10-22 06:37:26:295 - info: [debug] [ADB] Current device property 'ro.build.version.release': 7.1.2
-2018-10-22 06:37:26:295 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell wm size'
-2018-10-22 06:37:27:284 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell wm density'
-2018-10-22 06:37:28:234 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell getprop ro.product.model'
-2018-10-22 06:37:28:297 - info: [debug] [ADB] Current device property 'ro.product.model': Redmi 5A
-2018-10-22 06:37:28:298 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell getprop ro.product.manufacturer'
-2018-10-22 06:37:28:362 - info: [debug] [ADB] Current device property 'ro.product.manufacturer': Xiaomi
-2018-10-22 06:37:28:363 - info: [debug] [ADB] Device API level: 25
-2018-10-22 06:37:28:364 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell am force-stop io.appium.uiautomator2.server'
-2018-10-22 06:37:29:340 - info: [debug] [ADB] Checking app cert for C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk
-2018-10-22 06:37:29:342 - info: [ADB] Using apksigner.bat from D:\SDK\sdk\build-tools\25.0.0\apksigner.bat
-2018-10-22 06:37:29:344 - info: [debug] [ADB] Patching 'D:\SDK\sdk\build-tools\25.0.0\apksigner.bat' for Windows...
-2018-10-22 06:37:29:350 - info: [debug] [ADB] Starting patched 'C:\Users\201805~1\AppData\Local\Temp\2018922-108428-ssi83y.k1zt\apksigner.bat' with args 'verify,--print-certs,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk'
-2018-10-22 06:37:29:513 - info: [debug] [ADB] 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk' is not signed with debug cert.
-2018-10-22 06:37:29:514 - info: [debug] [ADB] Zip-aligning 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk'
-2018-10-22 06:37:29:515 - info: [ADB] Checking whether zipalign is present
-2018-10-22 06:37:29:516 - info: [ADB] Using zipalign.exe from D:\SDK\sdk\build-tools\25.0.0\zipalign.exe
-2018-10-22 06:37:29:564 - info: [debug] [ADB] Signing 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk' with default cert
-2018-10-22 06:37:29:570 - info: [debug] [ADB] Patching 'D:\SDK\sdk\build-tools\25.0.0\apksigner.bat' for Windows...
-2018-10-22 06:37:29:574 - info: [debug] [ADB] Starting patched 'C:\Users\201805~1\AppData\Local\Temp\2018922-108428-1s1552s.lopr\apksigner.bat' with args 'sign,--key,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\keys\testkey.pk8,--cert,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\keys\testkey.x509.pem,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk'
-2018-10-22 06:37:29:715 - info: [debug] [ADB] Checking app cert for C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk
-2018-10-22 06:37:29:716 - info: [debug] [ADB] Patching 'D:\SDK\sdk\build-tools\25.0.0\apksigner.bat' for Windows...
-2018-10-22 06:37:29:719 - info: [debug] [ADB] Starting patched 'C:\Users\201805~1\AppData\Local\Temp\2018922-108428-47s8i1.c73ng\apksigner.bat' with args 'verify,--print-certs,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
-2018-10-22 06:37:29:852 - info: [debug] [ADB] 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk' is not signed with debug cert.
-2018-10-22 06:37:29:852 - info: [debug] [ADB] Zip-aligning 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
-2018-10-22 06:37:29:898 - info: [debug] [ADB] Signing 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk' with default cert
-2018-10-22 06:37:29:900 - info: [debug] [ADB] Patching 'D:\SDK\sdk\build-tools\25.0.0\apksigner.bat' for Windows...
-2018-10-22 06:37:29:904 - info: [debug] [ADB] Starting patched 'C:\Users\201805~1\AppData\Local\Temp\2018922-108428-60og18.lqrc7\apksigner.bat' with args 'sign,--key,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\keys\testkey.pk8,--cert,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\keys\testkey.x509.pem,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
-2018-10-22 06:37:30:025 - info: [debug] [ADB] Uninstalling io.appium.uiautomator2.server
-2018-10-22 06:37:30:026 - info: [debug] [ADB] Getting install status for io.appium.uiautomator2.server
-2018-10-22 06:37:30:026 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list packages io.appium.uiautomator2.server'
-2018-10-22 06:37:31:011 - info: [debug] [ADB] App is installed
-2018-10-22 06:37:31:012 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell am force-stop io.appium.uiautomator2.server'
-2018-10-22 06:37:31:990 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 uninstall io.appium.uiautomator2.server'
-2018-10-22 06:37:32:551 - info: [debug] [ADB] 'adb uninstall io.appium.uiautomator2.server' command output: Success
-2018-10-22 06:37:32:551 - info: [ADB] io.appium.uiautomator2.server was successfully uninstalled
-2018-10-22 06:37:32:551 - info: [debug] [ADB] Uninstalling io.appium.uiautomator2.server.test
-2018-10-22 06:37:32:552 - info: [debug] [ADB] Getting install status for io.appium.uiautomator2.server.test
-2018-10-22 06:37:32:552 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list packages io.appium.uiautomator2.server.test'
-2018-10-22 06:37:33:739 - info: [debug] [ADB] App is installed
-2018-10-22 06:37:33:739 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell am force-stop io.appium.uiautomator2.server.test'
-2018-10-22 06:37:34:847 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 uninstall io.appium.uiautomator2.server.test'
-2018-10-22 06:37:35:452 - info: [debug] [ADB] 'adb uninstall io.appium.uiautomator2.server.test' command output: Success
-2018-10-22 06:37:35:453 - info: [ADB] io.appium.uiautomator2.server.test was successfully uninstalled
-2018-10-22 06:37:35:454 - info: [debug] [ADB] Getting install status for io.appium.uiautomator2.server
-2018-10-22 06:37:35:454 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list packages io.appium.uiautomator2.server'
-2018-10-22 06:37:36:574 - info: [debug] [ADB] App is not installed
-2018-10-22 06:37:36:574 - info: [debug] [ADB] App 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk' not installed. Installing
-2018-10-22 06:37:36:576 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 install C\:\\Users\\2018051001\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-uiautomator2-server\\apks\\appium-uiautomator2-server-v1.12.0.apk'
-2018-10-22 06:37:39:447 - info: [debug] [ADB] Install command stdout: Success
-2018-10-22 06:37:39:447 - info: [debug] [ADB] Getting install status for io.appium.uiautomator2.server.test
-2018-10-22 06:37:39:448 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list packages io.appium.uiautomator2.server.test'
-2018-10-22 06:37:40:568 - info: [debug] [ADB] App is not installed
-2018-10-22 06:37:40:568 - info: [debug] [ADB] App 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk' not installed. Installing
-2018-10-22 06:37:40:569 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 install C\:\\Users\\2018051001\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-uiautomator2-server\\apks\\appium-uiautomator2-server-debug-androidTest.apk'
-2018-10-22 06:37:42:998 - info: [debug] [ADB] Install command stdout: Success
-2018-10-22 06:37:42:998 - info: [debug] [UiAutomator2] Waiting up to 20000ms for instrumentation 'io.appium.uiautomator2.server.test/android.support.test.runner.AndroidJUnitRunner' to be available
-2018-10-22 06:37:42:999 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list instrumentation'
-2018-10-22 06:37:44:083 - info: [debug] [UiAutomator2] Instrumentation 'io.appium.uiautomator2.server.test/android.support.test.runner.AndroidJUnitRunner' available
-2018-10-22 06:37:44:085 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 wait-for-device'
-2018-10-22 06:37:44:118 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell echo ping'
-2018-10-22 06:37:44:165 - info: [debug] [AndroidDriver] Pushing settings apk to device...
-2018-10-22 06:37:44:167 - info: [debug] [ADB] Getting install status for io.appium.settings
-2018-10-22 06:37:44:167 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list packages io.appium.settings'
-2018-10-22 06:37:45:155 - info: [debug] [ADB] App is installed
-2018-10-22 06:37:45:156 - info: [debug] [ADB] Getting package info for 'io.appium.settings'
-2018-10-22 06:37:45:156 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell dumpsys package io.appium.settings'
-2018-10-22 06:37:45:279 - info: [debug] [ADB] The installed 'io.appium.settings' package does not require upgrade ('2.3.0' >= '2.3.0')
-2018-10-22 06:37:45:280 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell ps'
-2018-10-22 06:37:45:425 - info: [debug] [ADB] Device API level: 25
-2018-10-22 06:37:45:425 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell am start -W -n io.appium.settings/.Settings -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000'
-2018-10-22 06:37:46:744 - info: [debug] [ADB] Device API level: 25
-2018-10-22 06:37:46:744 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell appops set io.appium.settings android\:mock_location allow'
-2018-10-22 06:37:46:824 - warn: [AndroidDriver] setDeviceLanguageCountry requires language or country.
-2018-10-22 06:37:46:824 - warn: [AndroidDriver] Got language: 'null' and country: 'null'
-2018-10-22 06:37:46:826 - info: [debug] [Logcat] Starting logcat capture
-2018-10-22 06:37:46:888 - info: [debug] [AndroidDriver] Enabling Unicode keyboard support
-2018-10-22 06:37:46:888 - info: [debug] [AndroidDriver] Pushing unicode ime to device...
-2018-10-22 06:37:46:888 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 install C\:\\Users\\2018051001\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-android-ime\\bin\\UnicodeIME-debug.apk'
-2018-10-22 06:37:47:346 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 install C\:\\Users\\2018051001\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-android-ime\\bin\\UnicodeIME-debug.apk'
-2018-10-22 06:37:48:168 - info: [debug] [ADB] Application 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-android-ime\bin\UnicodeIME-debug.apk' already installed. Continuing.
-2018-10-22 06:37:48:169 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell settings get secure default_input_method'
-2018-10-22 06:37:49:216 - info: [debug] [AndroidDriver] Unsetting previous IME io.appium.android.ime/.UnicodeIME
-2018-10-22 06:37:49:216 - info: [debug] [AndroidDriver] Setting IME to 'io.appium.android.ime/.UnicodeIME'
-2018-10-22 06:37:49:217 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell ime enable io.appium.android.ime/.UnicodeIME'
-2018-10-22 06:37:50:194 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell ime set io.appium.android.ime/.UnicodeIME'
-2018-10-22 06:37:51:144 - info: [debug] [AndroidDriver] Pushing unlock helper app to device...
-2018-10-22 06:37:51:144 - info: [debug] [ADB] Getting install status for io.appium.unlock
-2018-10-22 06:37:51:144 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list packages io.appium.unlock'
-2018-10-22 06:37:52:109 - info: [debug] [ADB] App is installed
-2018-10-22 06:37:52:110 - info: [debug] [ADB] Getting package info for 'io.appium.unlock'
-2018-10-22 06:37:52:110 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell dumpsys package io.appium.unlock'
-2018-10-22 06:37:52:215 - info: [debug] [ADB] The installed 'io.appium.unlock' package does not require upgrade ('2.0.0' >= '2.0.0')
-2018-10-22 06:37:52:215 - info: [debug] [UiAutomator2] Forwarding UiAutomator2 Server port 6790 to 8202
-2018-10-22 06:37:52:216 - info: [debug] [ADB] Forwarding system: 8202 to device: 6790
-2018-10-22 06:37:52:216 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 forward tcp\:8202 tcp\:6790'
-2018-10-22 06:37:52:245 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell rm -rf /data/local/tmp/strings.json'
-2018-10-22 06:37:52:312 - info: [debug] [AndroidDriver] Extracting strings from apk
-2018-10-22 06:37:52:313 - info: [debug] [AndroidDriver] E:\pythonProject\appiumTest\nurotron\app\app-debug.apk
-2018-10-22 06:37:52:313 - info: [debug] [AndroidDriver] null
-2018-10-22 06:37:52:313 - info: [debug] [AndroidDriver] C:\Users\201805~1\AppData\Local\Temp\com.nurotron.ble_ui
-2018-10-22 06:37:52:315 - info: [debug] [ADB] Extracting strings for language: default
-2018-10-22 06:37:52:739 - info: [ADB] Successfully extracted 170 strings from 'E:\pythonProject\appiumTest\nurotron\app\app-debug.apk' resources for '(default)' configuration
-2018-10-22 06:37:52:831 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 push C\:\\Users\\201805~1\\AppData\\Local\\Temp\\com.nurotron.ble_ui\\strings.json /data/local/tmp'
-2018-10-22 06:37:52:993 - info: [debug] [ADB] Checking app cert for E:\pythonProject\appiumTest\nurotron\app\app-debug.apk
-2018-10-22 06:37:52:997 - info: [debug] [ADB] Patching 'D:\SDK\sdk\build-tools\25.0.0\apksigner.bat' for Windows...
-2018-10-22 06:37:53:006 - info: [debug] [ADB] Starting patched 'C:\Users\201805~1\AppData\Local\Temp\2018922-108428-5o1g8y.xuppf\apksigner.bat' with args 'verify,--print-certs,E:\pythonProject\appiumTest\nurotron\app\app-debug.apk'
-2018-10-22 06:37:53:231 - info: [debug] [ADB] 'E:\pythonProject\appiumTest\nurotron\app\app-debug.apk' is not signed with debug cert.
-2018-10-22 06:37:53:232 - info: [debug] [ADB] Zip-aligning 'E:\pythonProject\appiumTest\nurotron\app\app-debug.apk'
-2018-10-22 06:37:53:345 - info: [debug] [ADB] Signing 'E:\pythonProject\appiumTest\nurotron\app\app-debug.apk' with default cert
-2018-10-22 06:37:53:346 - info: [debug] [ADB] Patching 'D:\SDK\sdk\build-tools\25.0.0\apksigner.bat' for Windows...
-2018-10-22 06:37:53:350 - info: [debug] [ADB] Starting patched 'C:\Users\201805~1\AppData\Local\Temp\2018922-108428-13fghzz.w2w2\apksigner.bat' with args 'sign,--key,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\keys\testkey.pk8,--cert,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\keys\testkey.x509.pem,E:\pythonProject\appiumTest\nurotron\app\app-debug.apk'
-2018-10-22 06:37:53:494 - info: [debug] [ADB] Getting install status for com.nurotron.ble_ui
-2018-10-22 06:37:53:495 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list packages com.nurotron.ble_ui'
-2018-10-22 06:37:54:485 - info: [debug] [ADB] App is installed
-2018-10-22 06:37:54:485 - info: [debug] [ADB] Getting package info for 'com.nurotron.ble_ui'
-2018-10-22 06:37:54:485 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell dumpsys package com.nurotron.ble_ui'
-2018-10-22 06:37:54:592 - info: [debug] [ADB] The installed 'com.nurotron.ble_ui' package does not require upgrade ('2.0.2' >= '1.1.3')
-2018-10-22 06:37:54:593 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell am force-stop io.appium.uiautomator2.server'
-2018-10-22 06:37:55:569 - info: [UiAutomator2] Starting uiautomator2 server 1.12.0
-2018-10-22 06:37:55:569 - info: [UiAutomator2] Using UIAutomator2 server from 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk' and test from 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
-2018-10-22 06:37:55:570 - info: [UiAutomator2] Running command: 'adb -s 298384e47d74 shell am instrument -w io.appium.uiautomator2.server.test/android.support.test.runner.AndroidJUnitRunner'
-2018-10-22 06:37:55:572 - info: [UiAutomator2] Waiting up to 20000ms for UiAutomator2 to be online...
-2018-10-22 06:37:55:574 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8202/wd/hub/status] with no body
-2018-10-22 06:37:56:596 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8202/wd/hub/status] with no body
-2018-10-22 06:37:57:601 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8202/wd/hub/status] with no body
-2018-10-22 06:37:58:606 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8202/wd/hub/status] with no body
-2018-10-22 06:37:59:611 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8202/wd/hub/status] with no body
-2018-10-22 06:37:59:666 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\"sessionId\":\"SESSIONID\",\"status\":0,\"value\":\"Status Invoked\"}"
-2018-10-22 06:37:59:667 - info: [debug] [JSONWP Proxy] Proxying [POST /session] to [POST http://localhost:8202/wd/hub/session] with body: {"desiredCapabilities":{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","udid":"298384e47d74","noReset":true,"deviceName":"298384e47d74","autoGrantPermissions":true,"unicodeKeyboard":true,"resetKeyboard":true,"automationName":"Uiautomator2","app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk"},"platformName":"Android","udid":"298384e47d74","noReset":true,"deviceName":"298384e47d74","autoGrantPermissions":true,"unicodeKeyboard":true,"resetKeyboard":true,"automationName":"Uiautomator2","app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk","deviceUDID":"298384e47d74","platformVersion":"7.1.2","deviceScreenSize":"720x1280","deviceScreenDensity":320,"deviceModel":"Redmi 5A","deviceManufacturer":"Xiaomi","deviceApiLevel":25,"appPackage":"com.nurotron.ble_ui"}}
-2018-10-22 06:37:59:697 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182","status":0,"value":"Created Session"}
-2018-10-22 06:37:59:698 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell dumpsys window'
-2018-10-22 06:37:59:786 - info: [AndroidDriver] Screen already unlocked, doing nothing
-2018-10-22 06:37:59:787 - info: [UiAutomator2] UiAutomator2 did not start the activity we were waiting for, 'com.nurotron.ble_ui/com.nurotron.ble_ui.SplashActivity'. Starting it ourselves
-2018-10-22 06:37:59:787 - info: [debug] [ADB] Device API level: 25
-2018-10-22 06:37:59:788 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell am start -W -n com.nurotron.ble_ui/com.nurotron.ble_ui.SplashActivity -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000'
-2018-10-22 06:38:01:428 - info: [debug] [ADB] Waiting up to 20000ms for activity matching pkg: 'com.nurotron.ble_ui' and activity: 'com.nurotron.ble_ui.SplashActivity' to be focused
-2018-10-22 06:38:01:429 - info: [debug] [ADB] Possible activities, to be checked: 'com.nurotron.ble_ui.SplashActivity', 'com.nurotron.ble_ui.com.nurotron.ble_ui.SplashActivity'
-2018-10-22 06:38:01:430 - info: [debug] [ADB] Getting focused package and activity
-2018-10-22 06:38:01:430 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell dumpsys window windows'
-2018-10-22 06:38:01:497 - info: [debug] [ADB] Found package: 'com.nurotron.ble_ui' and fully qualified activity name : 'com.nurotron.ble_ui.SplashActivity'
-2018-10-22 06:38:01:498 - info: [debug] [JSONWP Proxy] Proxying [GET /appium/device/pixel_ratio] to [GET http://localhost:8202/wd/hub/session/9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182/appium/device/pixel_ratio] with body: {}
-2018-10-22 06:38:01:515 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\"sessionId\":\"9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182\",\"status\":0,\"value\":2}"
-2018-10-22 06:38:01:516 - info: [debug] [JSONWP Proxy] Proxying [GET /appium/device/system_bars] to [GET http://localhost:8202/wd/hub/session/9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182/appium/device/system_bars] with body: {}
-2018-10-22 06:38:01:548 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\"sessionId\":\"9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182\",\"status\":0,\"value\":{\"statusBar\":48}}"
-2018-10-22 06:38:01:549 - info: [debug] [JSONWP Proxy] Proxying [GET /window/current/size] to [GET http://localhost:8202/wd/hub/session/9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182/window/current/size] with body: {}
-2018-10-22 06:38:01:565 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\"sessionId\":\"9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182\",\"status\":0,\"value\":{\"height\":1280,\"width\":720}}"
-2018-10-22 06:38:01:566 - info: [Appium] New AndroidUiautomator2Driver session created successfully, session f3540cbc-c922-450c-91b4-1b482009cd14 added to master session list
-2018-10-22 06:38:01:568 - info: [debug] [BaseDriver] Event 'newSessionStarted' logged at 1540190281567 (14:38:01 GMT+0800 (中国标准时间))
-2018-10-22 06:38:01:569 - info: [debug] [W3C] Responding to client with driver.createSession() result: {"capabilities":{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","udid":"298384e47d74","noReset":true,"deviceName":"298384e47d74","autoGrantPermissions":true,"unicodeKeyboard":true,"resetKeyboard":true,"automationName":"Uiautomator2","app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk"},"platformName":"Android","udid":"298384e47d74","noReset":true,"deviceName":"298384e47d74","autoGrantPermissions":true,"unicodeKeyboard":true,"resetKeyboard":true,"automationName":"Uiautomator2","app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk","deviceUDID":"298384e47d74","platformVersion":"7.1.2","deviceScreenSize":"720x1280","deviceScreenDensity":320,"deviceModel":"Redmi 5A","deviceManufacturer":"Xiaomi","deviceApiLevel":25,"appPackage":"com.nurotron.ble_ui","pixelRatio":2,"statBarHeight":48,"viewportRect":{"lef...
-2018-10-22 06:38:01:574 - info: [HTTP] <-- POST /wd/hub/session 200 36211 ms - 1124
-2018-10-22 06:38:01:574 - info: [HTTP] 
-2018-10-22 06:38:11:581 - info: [HTTP] --> POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element
-2018-10-22 06:38:11:581 - info: [HTTP] {"using":"id","value":"com.nurotron.ble_ui:id/enter_password","sessionId":"f3540cbc-c922-450c-91b4-1b482009cd14"}
-2018-10-22 06:38:11:584 - info: [debug] [W3C] Calling AppiumDriver.findElement() with args: ["id","com.nurotron.ble_ui:id/enter_password","f3540cbc-c922-450c-91b4-1b482009cd14"]
-2018-10-22 06:38:11:591 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2018-10-22 06:38:11:592 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
-2018-10-22 06:38:11:593 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8202/wd/hub/session/9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182/element] with body: {"strategy":"id","selector":"com.nurotron.ble_ui:id/enter_password","context":"","multiple":false}
-2018-10-22 06:38:12:019 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182","status":0,"value":{"ELEMENT":"ee86ffd2-6b3b-4934-aec2-e630b32de284"}}
-2018-10-22 06:38:12:020 - info: [debug] [W3C] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"ee86ffd2-6b3b-4934-aec2-e630b32de284"}
-2018-10-22 06:38:12:022 - info: [HTTP] <-- POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element 200 440 ms - 88
-2018-10-22 06:38:12:022 - info: [HTTP] 
-2018-10-22 06:38:12:025 - info: [HTTP] --> POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element/ee86ffd2-6b3b-4934-aec2-e630b32de284/value
-2018-10-22 06:38:12:026 - info: [HTTP] {"text":"s1111111","value":["s","1","1","1","1","1","1","1"],"id":"ee86ffd2-6b3b-4934-aec2-e630b32de284","sessionId":"f3540cbc-c922-450c-91b4-1b482009cd14"}
-2018-10-22 06:38:12:027 - info: [debug] [W3C] Calling AppiumDriver.setValue() with args: [["s","1","1","1","1","1","1","1"],"ee86ffd2-6b3b-4934-aec2-e630b32de284","f3540cbc-c922-450c-91b4-1b482009cd14"]
-2018-10-22 06:38:12:029 - info: [debug] [JSONWP Proxy] Proxying [POST /element/ee86ffd2-6b3b-4934-aec2-e630b32de284/value] to [POST http://localhost:8202/wd/hub/session/9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182/element/ee86ffd2-6b3b-4934-aec2-e630b32de284/value] with body: {"elementId":"ee86ffd2-6b3b-4934-aec2-e630b32de284","text":"s1111111","replace":false,"unicodeKeyboard":true}
-2018-10-22 06:38:12:613 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182","status":0,"value":""}
-2018-10-22 06:38:12:614 - info: [debug] [W3C] Responding to client with driver.setValue() result: ""
-2018-10-22 06:38:12:615 - info: [HTTP] <-- POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element/ee86ffd2-6b3b-4934-aec2-e630b32de284/value 200 589 ms - 12
-2018-10-22 06:38:12:615 - info: [HTTP] 
-2018-10-22 06:38:12:620 - info: [HTTP] --> POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element
-2018-10-22 06:38:12:620 - info: [HTTP] {"using":"id","value":"com.nurotron.ble_ui:id/user_login","sessionId":"f3540cbc-c922-450c-91b4-1b482009cd14"}
-2018-10-22 06:38:12:621 - info: [debug] [W3C] Calling AppiumDriver.findElement() with args: ["id","com.nurotron.ble_ui:id/user_login","f3540cbc-c922-450c-91b4-1b482009cd14"]
-2018-10-22 06:38:12:622 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2018-10-22 06:38:12:622 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
-2018-10-22 06:38:12:623 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8202/wd/hub/session/9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182/element] with body: {"strategy":"id","selector":"com.nurotron.ble_ui:id/user_login","context":"","multiple":false}
-2018-10-22 06:38:13:123 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182","status":0,"value":{"ELEMENT":"cca95b48-9db0-4c98-9173-6b83b05a40c2"}}
-2018-10-22 06:38:13:123 - info: [debug] [W3C] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"cca95b48-9db0-4c98-9173-6b83b05a40c2"}
-2018-10-22 06:38:13:125 - info: [HTTP] <-- POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element 200 504 ms - 88
-2018-10-22 06:38:13:125 - info: [HTTP] 
-2018-10-22 06:38:13:128 - info: [HTTP] --> POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element/cca95b48-9db0-4c98-9173-6b83b05a40c2/click
-2018-10-22 06:38:13:128 - info: [HTTP] {"id":"cca95b48-9db0-4c98-9173-6b83b05a40c2","sessionId":"f3540cbc-c922-450c-91b4-1b482009cd14"}
-2018-10-22 06:38:13:129 - info: [debug] [W3C] Calling AppiumDriver.click() with args: ["cca95b48-9db0-4c98-9173-6b83b05a40c2","f3540cbc-c922-450c-91b4-1b482009cd14"]
-2018-10-22 06:38:13:131 - info: [debug] [JSONWP Proxy] Proxying [POST /element/cca95b48-9db0-4c98-9173-6b83b05a40c2/click] to [POST http://localhost:8202/wd/hub/session/9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182/element/cca95b48-9db0-4c98-9173-6b83b05a40c2/click] with body: {"element":"cca95b48-9db0-4c98-9173-6b83b05a40c2"}
-2018-10-22 06:38:13:172 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182","status":0,"value":true}
-2018-10-22 06:38:13:173 - info: [debug] [W3C] Responding to client with driver.click() result: true
-2018-10-22 06:38:13:174 - info: [HTTP] <-- POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element/cca95b48-9db0-4c98-9173-6b83b05a40c2/click 200 45 ms - 14
-2018-10-22 06:38:13:174 - info: [HTTP] 
-2018-10-22 06:38:13:180 - info: [HTTP] --> POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element
-2018-10-22 06:38:13:180 - info: [HTTP] {"using":"id","value":"com.nurotron.ble_ui:id/enter_password","sessionId":"f3540cbc-c922-450c-91b4-1b482009cd14"}
-2018-10-22 06:38:13:181 - info: [debug] [W3C] Calling AppiumDriver.findElement() with args: ["id","com.nurotron.ble_ui:id/enter_password","f3540cbc-c922-450c-91b4-1b482009cd14"]
-2018-10-22 06:38:13:182 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2018-10-22 06:38:13:182 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
-2018-10-22 06:38:13:183 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8202/wd/hub/session/9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182/element] with body: {"strategy":"id","selector":"com.nurotron.ble_ui:id/enter_password","context":"","multiple":false}
-2018-10-22 06:38:13:701 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182","status":0,"value":{"ELEMENT":"ce5a7254-4333-409a-87d3-59022f687dc5"}}
-2018-10-22 06:38:13:702 - info: [debug] [W3C] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"ce5a7254-4333-409a-87d3-59022f687dc5"}
-2018-10-22 06:38:13:703 - info: [HTTP] <-- POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element 200 523 ms - 88
-2018-10-22 06:38:13:703 - info: [HTTP] 
-2018-10-22 06:38:13:706 - info: [HTTP] --> POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element/ce5a7254-4333-409a-87d3-59022f687dc5/value
-2018-10-22 06:38:13:707 - info: [HTTP] {"text":"s1234567","value":["s","1","2","3","4","5","6","7"],"id":"ce5a7254-4333-409a-87d3-59022f687dc5","sessionId":"f3540cbc-c922-450c-91b4-1b482009cd14"}
-2018-10-22 06:38:13:707 - info: [debug] [W3C] Calling AppiumDriver.setValue() with args: [["s","1","2","3","4","5","6","7"],"ce5a7254-4333-409a-87d3-59022f687dc5","f3540cbc-c922-450c-91b4-1b482009cd14"]
-2018-10-22 06:38:13:708 - info: [debug] [JSONWP Proxy] Proxying [POST /element/ce5a7254-4333-409a-87d3-59022f687dc5/value] to [POST http://localhost:8202/wd/hub/session/9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182/element/ce5a7254-4333-409a-87d3-59022f687dc5/value] with body: {"elementId":"ce5a7254-4333-409a-87d3-59022f687dc5","text":"s1234567","replace":false,"unicodeKeyboard":true}
-2018-10-22 06:38:14:279 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182","status":0,"value":""}
-2018-10-22 06:38:14:280 - info: [debug] [W3C] Responding to client with driver.setValue() result: ""
-2018-10-22 06:38:14:281 - info: [HTTP] <-- POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element/ce5a7254-4333-409a-87d3-59022f687dc5/value 200 574 ms - 12
-2018-10-22 06:38:14:281 - info: [HTTP] 
-2018-10-22 06:38:14:287 - info: [HTTP] --> POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element
-2018-10-22 06:38:14:287 - info: [HTTP] {"using":"id","value":"com.nurotron.ble_ui:id/user_login","sessionId":"f3540cbc-c922-450c-91b4-1b482009cd14"}
-2018-10-22 06:38:14:288 - info: [debug] [W3C] Calling AppiumDriver.findElement() with args: ["id","com.nurotron.ble_ui:id/user_login","f3540cbc-c922-450c-91b4-1b482009cd14"]
-2018-10-22 06:38:14:289 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2018-10-22 06:38:14:290 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
-2018-10-22 06:38:14:290 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8202/wd/hub/session/9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182/element] with body: {"strategy":"id","selector":"com.nurotron.ble_ui:id/user_login","context":"","multiple":false}
-2018-10-22 06:38:14:791 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182","status":0,"value":{"ELEMENT":"aa07acdc-dfa7-4c1c-b28d-f4372e15eba5"}}
-2018-10-22 06:38:14:792 - info: [debug] [W3C] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"aa07acdc-dfa7-4c1c-b28d-f4372e15eba5"}
-2018-10-22 06:38:14:793 - info: [HTTP] <-- POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element 200 506 ms - 88
-2018-10-22 06:38:14:793 - info: [HTTP] 
-2018-10-22 06:38:14:796 - info: [HTTP] --> POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element/aa07acdc-dfa7-4c1c-b28d-f4372e15eba5/click
-2018-10-22 06:38:14:796 - info: [HTTP] {"id":"aa07acdc-dfa7-4c1c-b28d-f4372e15eba5","sessionId":"f3540cbc-c922-450c-91b4-1b482009cd14"}
-2018-10-22 06:38:14:797 - info: [debug] [W3C] Calling AppiumDriver.click() with args: ["aa07acdc-dfa7-4c1c-b28d-f4372e15eba5","f3540cbc-c922-450c-91b4-1b482009cd14"]
-2018-10-22 06:38:14:798 - info: [debug] [JSONWP Proxy] Proxying [POST /element/aa07acdc-dfa7-4c1c-b28d-f4372e15eba5/click] to [POST http://localhost:8202/wd/hub/session/9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182/element/aa07acdc-dfa7-4c1c-b28d-f4372e15eba5/click] with body: {"element":"aa07acdc-dfa7-4c1c-b28d-f4372e15eba5"}
-2018-10-22 06:38:14:837 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182","status":0,"value":true}
-2018-10-22 06:38:14:838 - info: [debug] [W3C] Responding to client with driver.click() result: true
-2018-10-22 06:38:14:838 - info: [HTTP] <-- POST /wd/hub/session/f3540cbc-c922-450c-91b4-1b482009cd14/element/aa07acdc-dfa7-4c1c-b28d-f4372e15eba5/click 200 42 ms - 14
-2018-10-22 06:38:14:838 - info: [HTTP] 
-2018-10-22 06:39:14:839 - warn: [BaseDriver] Shutting down because we waited 60 seconds for a command
-2018-10-22 06:39:14:843 - info: [debug] [UiAutomator2] Deleting UiAutomator2 session
-2018-10-22 06:39:14:845 - info: [debug] [UiAutomator2] Deleting UiAutomator2 server session
-2018-10-22 06:39:14:845 - info: [debug] [JSONWP Proxy] Proxying [DELETE /] to [DELETE http://localhost:8202/wd/hub/session/9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182] with no body
-2018-10-22 06:39:14:847 - warn: [Appium] Closing session, cause was 'New Command Timeout of 60 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
-2018-10-22 06:39:14:847 - info: [Appium] Removing session f3540cbc-c922-450c-91b4-1b482009cd14 from our master session list
-2018-10-22 06:39:14:866 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\"sessionId\":\"9bc00bbb-77ee-4a42-8ca5-e1e2e08ca182\",\"status\":0,\"value\":\"Session deleted\"}"
-2018-10-22 06:39:14:866 - info: [debug] [UiAutomator2] Resetting IME to 'io.appium.android.ime/.UnicodeIME'
-2018-10-22 06:39:14:867 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell ime set io.appium.android.ime/.UnicodeIME'
-2018-10-22 06:39:15:267 - info: [debug] [UiAutomator2] [UIAutomator2] io.appium.uiautomator2.server.test.AppiumUiAutomator2Server:.
-2018-10-22 06:39:15:267 - info: [debug] [UiAutomator2] [UIAutomator2] Time: 77.043
-2018-10-22 06:39:15:267 - info: [debug] [UiAutomator2] [UIAutomator2] OK (1 test)
-2018-10-22 06:39:15:890 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell am force-stop com.nurotron.ble_ui'
-2018-10-22 06:39:16:906 - info: [debug] [Logcat] Stopping logcat capture
-2018-10-22 06:39:16:912 - info: [debug] [ADB] Removing forwarded port socket connection: 8202 
-2018-10-22 06:39:16:912 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 forward --remove tcp\:8202'
+2018-10-24 08:00:43:428 - info: [Appium] Welcome to Appium v1.8.1
+2018-10-24 08:00:43:430 - info: [Appium] Non-default server args:
+2018-10-24 08:00:43:431 - info: [Appium]   bootstrapPort: 4900
+2018-10-24 08:00:43:431 - info: [Appium]   sessionOverride: true
+2018-10-24 08:00:43:431 - info: [Appium]   log: E:\pythonProject\appiumTest\nurotron\result\log\test01.log
+2018-10-24 08:00:43:431 - info: [Appium]   udid: 298384e47d74
+2018-10-24 08:00:43:431 - info: [Appium]   noReset: true
+2018-10-24 08:00:43:432 - warn: [Appium] Deprecated server args:
+2018-10-24 08:00:43:432 - warn: [Appium]   -U,--udid => --default-capabilities '{"udid":"298384e47d74"}'
+2018-10-24 08:00:43:432 - warn: [Appium]   --no-reset => --default-capabilities '{"noReset":true}'
+2018-10-24 08:00:43:432 - info: [Appium] Default capabilities, which will be added to each request unless overridden by desired capabilities:
+2018-10-24 08:00:43:433 - info: [Appium]   udid: 298384e47d74
+2018-10-24 08:00:43:433 - info: [Appium]   noReset: true
+2018-10-24 08:00:43:479 - info: [Appium] Appium REST http interface listener started on 0.0.0.0:4723
+2018-10-24 08:01:06:097 - info: [HTTP] --> POST /wd/hub/session
+2018-10-24 08:01:06:097 - info: [HTTP] {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"platformName":"Android","appium:deviceName":"298384e47d74","appium:autoGrantPermissions":"true","appium:unicodeKeyboard":"true","appium:resetKeyboard":"true","appium:automationName":"Uiautomator2","appium:app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk","appium:noReset":"true"}},"desiredCapabilities":{"platformName":"Android","deviceName":"298384e47d74","autoGrantPermissions":"true","unicodeKeyboard":"true","resetKeyboard":"true","automationName":"Uiautomator2","app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk","noReset":"true"}}
+2018-10-24 08:01:06:100 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"platformName":"Android","deviceName":"298384e47d74","autoGrantPermissions":"true","unicodeKeyboard":"true","resetKeyboard":"true","automationName":"Uiautomator2","app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk","noReset":"true"},null,{"firstMatch":[{}],"alwaysMatch":{"platformName":"Android","appium:deviceName":"298384e47d74","appium:autoGrantPermissions":"true","appium:unicodeKeyboard":"true","appium:resetKeyboard":"true","appium:automationName":"Uiautomator2","appium:app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk","appium:noReset":"true"}}]
+2018-10-24 08:01:06:102 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1540368066102 (16:01:06 GMT+0800 (中国标准时间))
+2018-10-24 08:01:06:106 - warn: [BaseDriver] The capabilities ["udid","noReset"] are not standard capabilities and should have an extension prefix
+2018-10-24 08:01:06:109 - warn: [BaseDriver] Boolean capability passed in as string. Functionality may be compromised.
+2018-10-24 08:01:06:112 - info: [Appium] Creating new AndroidUiautomator2Driver (v1.12.0) session
+2018-10-24 08:01:06:113 - info: [Appium] Capabilities:
+2018-10-24 08:01:06:113 - info: [Appium]   udid: 298384e47d74
+2018-10-24 08:01:06:113 - info: [Appium]   noReset: true
+2018-10-24 08:01:06:113 - info: [Appium]   platformName: Android
+2018-10-24 08:01:06:113 - info: [Appium]   deviceName: 298384e47d74
+2018-10-24 08:01:06:114 - info: [Appium]   autoGrantPermissions: true
+2018-10-24 08:01:06:114 - info: [Appium]   unicodeKeyboard: true
+2018-10-24 08:01:06:114 - info: [Appium]   resetKeyboard: true
+2018-10-24 08:01:06:114 - info: [Appium]   automationName: Uiautomator2
+2018-10-24 08:01:06:114 - info: [Appium]   app: E:\pythonProject\appiumTest\nurotron\app\app-debug.apk
+2018-10-24 08:01:06:119 - info: [debug] [BaseDriver] W3C capabilities {"alwaysMatch":{"appium:udi... and MJSONWP desired capabilities [object Object] were provided
+2018-10-24 08:01:06:119 - info: [debug] [BaseDriver] Creating session with W3C capabilities: {"alwaysMatch":{"appium:udi...
+2018-10-24 08:01:06:122 - warn: [BaseDriver] Boolean capability passed in as string. Functionality may be compromised.
+2018-10-24 08:01:06:122 - warn: [BaseDriver] Boolean capability passed in as string. Functionality may be compromised.
+2018-10-24 08:01:06:122 - warn: [BaseDriver] Boolean capability passed in as string. Functionality may be compromised.
+2018-10-24 08:01:06:122 - warn: [BaseDriver] Boolean capability passed in as string. Functionality may be compromised.
+2018-10-24 08:01:06:125 - warn: [BaseDriver] Capability 'noReset' changed from string to boolean. This may cause unexpected behavior
+2018-10-24 08:01:06:126 - warn: [BaseDriver] Capability 'unicodeKeyboard' changed from string to boolean. This may cause unexpected behavior
+2018-10-24 08:01:06:126 - warn: [BaseDriver] Capability 'resetKeyboard' changed from string to boolean. This may cause unexpected behavior
+2018-10-24 08:01:06:126 - warn: [BaseDriver] Capability 'autoGrantPermissions' changed from string to boolean. This may cause unexpected behavior
+2018-10-24 08:01:06:130 - info: [BaseDriver] Session created with session id: 43bca7a0-abd6-485f-b8e3-3aba627f645c
+2018-10-24 08:01:06:178 - info: [BaseDriver] Using local app 'E:\pythonProject\appiumTest\nurotron\app\app-debug.apk'
+2018-10-24 08:01:06:178 - info: [debug] [UiAutomator2] Checking whether app is actually present
+2018-10-24 08:01:06:587 - info: [debug] [AndroidDriver] Getting Java version
+2018-10-24 08:01:06:789 - info: [AndroidDriver] Java version is: 1.8.0_171
+2018-10-24 08:01:06:793 - info: [ADB] Checking whether adb is present
+2018-10-24 08:01:06:802 - warn: [ADB] Cannot sort build-tools folders ["21.1.1","25.0.0","27.0.3","28.0.0","28.0.1","android-4.4W"] by semantic version names.
+2018-10-24 08:01:06:803 - warn: [ADB] Falling back to sorting by modification date. Original error: Invalid Version: android-4.4W
+2018-10-24 08:01:06:807 - info: [ADB] Found 6 'build-tools' folders under 'D:\SDK\sdk' (newest first):
+2018-10-24 08:01:06:807 - info: [ADB]     D:/SDK/sdk/build-tools/25.0.0
+2018-10-24 08:01:06:808 - info: [ADB]     D:/SDK/sdk/build-tools/28.0.1
+2018-10-24 08:01:06:808 - info: [ADB]     D:/SDK/sdk/build-tools/21.1.1
+2018-10-24 08:01:06:808 - info: [ADB]     D:/SDK/sdk/build-tools/27.0.3
+2018-10-24 08:01:06:808 - info: [ADB]     D:/SDK/sdk/build-tools/28.0.0
+2018-10-24 08:01:06:808 - info: [ADB]     D:/SDK/sdk/build-tools/android-4.4W
+2018-10-24 08:01:06:810 - info: [ADB] Using adb.exe from D:\SDK\sdk\platform-tools\adb.exe
+2018-10-24 08:01:06:810 - info: [AndroidDriver] Retrieving device list
+2018-10-24 08:01:06:811 - info: [debug] [ADB] Trying to find a connected android device
+2018-10-24 08:01:06:813 - info: [debug] [ADB] Getting connected devices...
+2018-10-24 08:01:06:859 - info: [debug] [ADB] 1 device(s) connected
+2018-10-24 08:01:06:860 - info: [AndroidDriver] Using device: 298384e47d74
+2018-10-24 08:01:06:861 - info: [debug] [ADB] Setting device id to 298384e47d74
+2018-10-24 08:01:06:863 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell getprop ro.build.version.sdk'
+2018-10-24 08:01:07:075 - info: [debug] [ADB] Current device property 'ro.build.version.sdk': 25
+2018-10-24 08:01:07:076 - info: [debug] [ADB] Device API level: 25
+2018-10-24 08:01:07:076 - info: [debug] [AndroidDriver] Parsing package and activity from app manifest
+2018-10-24 08:01:07:100 - info: [ADB] Using the alternative activity name detection method because of: Could not find apkanalyzer.bat in D:\SDK\sdk\platform-tools\apkanalyzer.bat,D:\SDK\sdk\emulator\apkanalyzer.bat,D:\SDK\sdk\tools\apkanalyzer.bat,D:\SDK\sdk\tools\bin\apkanalyzer.bat,D:\SDK\sdk\build-tools\25.0.0\apkanalyzer.bat,D:\SDK\sdk\build-tools\28.0.1\apkanalyzer.bat,D:\SDK\sdk\build-tools\21.1.1\apkanalyzer.bat,D:\SDK\sdk\build-tools\27.0.3\apkanalyzer.bat,D:\SDK\sdk\build-tools\28.0.0\apkanalyzer.bat,D:\SDK\sdk\build-tools\android-4.4W\apkanalyzer.bat. Do you have the Android SDK installed at 'D:\SDK\sdk'?
+2018-10-24 08:01:07:100 - info: [ADB] Checking whether aapt is present
+2018-10-24 08:01:07:103 - info: [ADB] Using aapt.exe from D:\SDK\sdk\build-tools\25.0.0\aapt.exe
+2018-10-24 08:01:07:104 - info: [ADB] Extracting package and launch activity from manifest
+2018-10-24 08:01:07:178 - info: [ADB] Package name: 'com.nurotron.ble_ui'
+2018-10-24 08:01:07:179 - info: [ADB] Main activity name: 'com.nurotron.ble_ui.SplashActivity'
+2018-10-24 08:01:07:179 - info: [debug] [AndroidDriver] Parsed package and activity are: com.nurotron.ble_ui/com.nurotron.ble_ui.SplashActivity
+2018-10-24 08:01:07:180 - info: [ADB] Getting device platform version
+2018-10-24 08:01:07:180 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell getprop ro.build.version.release'
+2018-10-24 08:01:07:246 - info: [debug] [ADB] Current device property 'ro.build.version.release': 7.1.2
+2018-10-24 08:01:07:247 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell wm size'
+2018-10-24 08:01:08:310 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell wm density'
+2018-10-24 08:01:09:277 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell getprop ro.product.model'
+2018-10-24 08:01:09:339 - info: [debug] [ADB] Current device property 'ro.product.model': Redmi 5A
+2018-10-24 08:01:09:340 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell getprop ro.product.manufacturer'
+2018-10-24 08:01:09:400 - info: [debug] [ADB] Current device property 'ro.product.manufacturer': Xiaomi
+2018-10-24 08:01:09:400 - info: [debug] [ADB] Device API level: 25
+2018-10-24 08:01:09:402 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell am force-stop io.appium.uiautomator2.server'
+2018-10-24 08:01:10:383 - info: [debug] [ADB] Checking app cert for C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk
+2018-10-24 08:01:10:385 - info: [ADB] Using apksigner.bat from D:\SDK\sdk\build-tools\25.0.0\apksigner.bat
+2018-10-24 08:01:10:388 - info: [debug] [ADB] Patching 'D:\SDK\sdk\build-tools\25.0.0\apksigner.bat' for Windows...
+2018-10-24 08:01:10:393 - info: [debug] [ADB] Starting patched 'C:\Users\201805~1\AppData\Local\Temp\2018924-110236-1xyez7y.r9xyj\apksigner.bat' with args 'verify,--print-certs,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk'
+2018-10-24 08:01:10:585 - info: [debug] [ADB] 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk' is not signed with debug cert.
+2018-10-24 08:01:10:586 - info: [debug] [ADB] Zip-aligning 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk'
+2018-10-24 08:01:10:587 - info: [ADB] Checking whether zipalign is present
+2018-10-24 08:01:10:589 - info: [ADB] Using zipalign.exe from D:\SDK\sdk\build-tools\25.0.0\zipalign.exe
+2018-10-24 08:01:10:642 - info: [debug] [ADB] Signing 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk' with default cert
+2018-10-24 08:01:10:643 - info: [debug] [ADB] Patching 'D:\SDK\sdk\build-tools\25.0.0\apksigner.bat' for Windows...
+2018-10-24 08:01:10:652 - info: [debug] [ADB] Starting patched 'C:\Users\201805~1\AppData\Local\Temp\2018924-110236-1ab14sz.o8yyg\apksigner.bat' with args 'sign,--key,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\keys\testkey.pk8,--cert,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\keys\testkey.x509.pem,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk'
+2018-10-24 08:01:10:786 - info: [debug] [ADB] Checking app cert for C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk
+2018-10-24 08:01:10:787 - info: [debug] [ADB] Patching 'D:\SDK\sdk\build-tools\25.0.0\apksigner.bat' for Windows...
+2018-10-24 08:01:10:793 - info: [debug] [ADB] Starting patched 'C:\Users\201805~1\AppData\Local\Temp\2018924-110236-19gol49.u232\apksigner.bat' with args 'verify,--print-certs,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
+2018-10-24 08:01:10:919 - info: [debug] [ADB] 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk' is not signed with debug cert.
+2018-10-24 08:01:10:920 - info: [debug] [ADB] Zip-aligning 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
+2018-10-24 08:01:10:974 - info: [debug] [ADB] Signing 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk' with default cert
+2018-10-24 08:01:10:975 - info: [debug] [ADB] Patching 'D:\SDK\sdk\build-tools\25.0.0\apksigner.bat' for Windows...
+2018-10-24 08:01:10:979 - info: [debug] [ADB] Starting patched 'C:\Users\201805~1\AppData\Local\Temp\2018924-110236-15m8hhd.q5fe\apksigner.bat' with args 'sign,--key,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\keys\testkey.pk8,--cert,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\keys\testkey.x509.pem,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
+2018-10-24 08:01:11:090 - info: [debug] [ADB] Uninstalling io.appium.uiautomator2.server
+2018-10-24 08:01:11:091 - info: [debug] [ADB] Getting install status for io.appium.uiautomator2.server
+2018-10-24 08:01:11:091 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list packages io.appium.uiautomator2.server'
+2018-10-24 08:01:12:080 - info: [debug] [ADB] App is installed
+2018-10-24 08:01:12:080 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell am force-stop io.appium.uiautomator2.server'
+2018-10-24 08:01:13:043 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 uninstall io.appium.uiautomator2.server'
+2018-10-24 08:01:13:599 - info: [debug] [ADB] 'adb uninstall io.appium.uiautomator2.server' command output: Success
+2018-10-24 08:01:13:599 - info: [ADB] io.appium.uiautomator2.server was successfully uninstalled
+2018-10-24 08:01:13:599 - info: [debug] [ADB] Uninstalling io.appium.uiautomator2.server.test
+2018-10-24 08:01:13:600 - info: [debug] [ADB] Getting install status for io.appium.uiautomator2.server.test
+2018-10-24 08:01:13:600 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list packages io.appium.uiautomator2.server.test'
+2018-10-24 08:01:14:791 - info: [debug] [ADB] App is installed
+2018-10-24 08:01:14:792 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell am force-stop io.appium.uiautomator2.server.test'
+2018-10-24 08:01:15:981 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 uninstall io.appium.uiautomator2.server.test'
+2018-10-24 08:01:16:663 - info: [debug] [ADB] 'adb uninstall io.appium.uiautomator2.server.test' command output: Success
+2018-10-24 08:01:16:663 - info: [ADB] io.appium.uiautomator2.server.test was successfully uninstalled
+2018-10-24 08:01:16:665 - info: [debug] [ADB] Getting install status for io.appium.uiautomator2.server
+2018-10-24 08:01:16:665 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list packages io.appium.uiautomator2.server'
+2018-10-24 08:01:17:869 - info: [debug] [ADB] App is not installed
+2018-10-24 08:01:17:869 - info: [debug] [ADB] App 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk' not installed. Installing
+2018-10-24 08:01:17:871 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 install C\:\\Users\\2018051001\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-uiautomator2-server\\apks\\appium-uiautomator2-server-v1.12.0.apk'
+2018-10-24 08:01:20:361 - info: [debug] [ADB] Install command stdout: Success
+2018-10-24 08:01:20:361 - info: [debug] [ADB] Getting install status for io.appium.uiautomator2.server.test
+2018-10-24 08:01:20:362 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list packages io.appium.uiautomator2.server.test'
+2018-10-24 08:01:21:561 - info: [debug] [ADB] App is not installed
+2018-10-24 08:01:21:561 - info: [debug] [ADB] App 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk' not installed. Installing
+2018-10-24 08:01:21:562 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 install C\:\\Users\\2018051001\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-uiautomator2-server\\apks\\appium-uiautomator2-server-debug-androidTest.apk'
+2018-10-24 08:01:24:031 - info: [debug] [ADB] Install command stdout: Success
+2018-10-24 08:01:24:032 - info: [debug] [UiAutomator2] Waiting up to 20000ms for instrumentation 'io.appium.uiautomator2.server.test/android.support.test.runner.AndroidJUnitRunner' to be available
+2018-10-24 08:01:24:033 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list instrumentation'
+2018-10-24 08:01:25:109 - info: [debug] [UiAutomator2] Instrumentation 'io.appium.uiautomator2.server.test/android.support.test.runner.AndroidJUnitRunner' available
+2018-10-24 08:01:25:110 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 wait-for-device'
+2018-10-24 08:01:25:139 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell echo ping'
+2018-10-24 08:01:25:192 - info: [debug] [AndroidDriver] Pushing settings apk to device...
+2018-10-24 08:01:25:193 - info: [debug] [ADB] Getting install status for io.appium.settings
+2018-10-24 08:01:25:193 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list packages io.appium.settings'
+2018-10-24 08:01:26:199 - info: [debug] [ADB] App is installed
+2018-10-24 08:01:26:200 - info: [debug] [ADB] Getting package info for 'io.appium.settings'
+2018-10-24 08:01:26:200 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell dumpsys package io.appium.settings'
+2018-10-24 08:01:26:469 - info: [debug] [ADB] The installed 'io.appium.settings' package does not require upgrade ('2.3.0' >= '2.3.0')
+2018-10-24 08:01:26:470 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell ps'
+2018-10-24 08:01:26:629 - info: [debug] [ADB] Device API level: 25
+2018-10-24 08:01:26:630 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell am start -W -n io.appium.settings/.Settings -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000'
+2018-10-24 08:01:27:995 - info: [debug] [ADB] Device API level: 25
+2018-10-24 08:01:27:995 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell appops set io.appium.settings android\:mock_location allow'
+2018-10-24 08:01:28:074 - warn: [AndroidDriver] setDeviceLanguageCountry requires language or country.
+2018-10-24 08:01:28:075 - warn: [AndroidDriver] Got language: 'null' and country: 'null'
+2018-10-24 08:01:28:076 - info: [debug] [Logcat] Starting logcat capture
+2018-10-24 08:01:28:138 - info: [debug] [AndroidDriver] Enabling Unicode keyboard support
+2018-10-24 08:01:28:138 - info: [debug] [AndroidDriver] Pushing unicode ime to device...
+2018-10-24 08:01:28:139 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 install C\:\\Users\\2018051001\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-android-ime\\bin\\UnicodeIME-debug.apk'
+2018-10-24 08:01:28:613 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 install C\:\\Users\\2018051001\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-android-ime\\bin\\UnicodeIME-debug.apk'
+2018-10-24 08:01:29:310 - info: [debug] [ADB] Application 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-android-ime\bin\UnicodeIME-debug.apk' already installed. Continuing.
+2018-10-24 08:01:29:311 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell settings get secure default_input_method'
+2018-10-24 08:01:30:507 - info: [debug] [AndroidDriver] Unsetting previous IME io.appium.android.ime/.UnicodeIME
+2018-10-24 08:01:30:507 - info: [debug] [AndroidDriver] Setting IME to 'io.appium.android.ime/.UnicodeIME'
+2018-10-24 08:01:30:508 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell ime enable io.appium.android.ime/.UnicodeIME'
+2018-10-24 08:01:31:495 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell ime set io.appium.android.ime/.UnicodeIME'
+2018-10-24 08:01:32:471 - info: [debug] [AndroidDriver] Pushing unlock helper app to device...
+2018-10-24 08:01:32:472 - info: [debug] [ADB] Getting install status for io.appium.unlock
+2018-10-24 08:01:32:472 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list packages io.appium.unlock'
+2018-10-24 08:01:33:443 - info: [debug] [ADB] App is installed
+2018-10-24 08:01:33:444 - info: [debug] [ADB] Getting package info for 'io.appium.unlock'
+2018-10-24 08:01:33:444 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell dumpsys package io.appium.unlock'
+2018-10-24 08:01:33:563 - info: [debug] [ADB] The installed 'io.appium.unlock' package does not require upgrade ('2.0.0' >= '2.0.0')
+2018-10-24 08:01:33:564 - info: [debug] [UiAutomator2] Forwarding UiAutomator2 Server port 6790 to 8210
+2018-10-24 08:01:33:564 - info: [debug] [ADB] Forwarding system: 8210 to device: 6790
+2018-10-24 08:01:33:564 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 forward tcp\:8210 tcp\:6790'
+2018-10-24 08:01:33:593 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell rm -rf /data/local/tmp/strings.json'
+2018-10-24 08:01:33:664 - info: [debug] [AndroidDriver] Extracting strings from apk
+2018-10-24 08:01:33:664 - info: [debug] [AndroidDriver] E:\pythonProject\appiumTest\nurotron\app\app-debug.apk
+2018-10-24 08:01:33:664 - info: [debug] [AndroidDriver] null
+2018-10-24 08:01:33:665 - info: [debug] [AndroidDriver] C:\Users\201805~1\AppData\Local\Temp\com.nurotron.ble_ui
+2018-10-24 08:01:33:666 - info: [debug] [ADB] Extracting strings for language: default
+2018-10-24 08:01:34:057 - info: [ADB] Successfully extracted 170 strings from 'E:\pythonProject\appiumTest\nurotron\app\app-debug.apk' resources for '(default)' configuration
+2018-10-24 08:01:34:067 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 push C\:\\Users\\201805~1\\AppData\\Local\\Temp\\com.nurotron.ble_ui\\strings.json /data/local/tmp'
+2018-10-24 08:01:34:184 - info: [debug] [ADB] Checking app cert for E:\pythonProject\appiumTest\nurotron\app\app-debug.apk
+2018-10-24 08:01:34:185 - info: [debug] [ADB] Patching 'D:\SDK\sdk\build-tools\25.0.0\apksigner.bat' for Windows...
+2018-10-24 08:01:34:189 - info: [debug] [ADB] Starting patched 'C:\Users\201805~1\AppData\Local\Temp\2018924-110236-ibf7m8.uwto9\apksigner.bat' with args 'verify,--print-certs,E:\pythonProject\appiumTest\nurotron\app\app-debug.apk'
+2018-10-24 08:01:34:378 - info: [debug] [ADB] 'E:\pythonProject\appiumTest\nurotron\app\app-debug.apk' is not signed with debug cert.
+2018-10-24 08:01:34:378 - info: [debug] [ADB] Zip-aligning 'E:\pythonProject\appiumTest\nurotron\app\app-debug.apk'
+2018-10-24 08:01:34:509 - info: [debug] [ADB] Signing 'E:\pythonProject\appiumTest\nurotron\app\app-debug.apk' with default cert
+2018-10-24 08:01:34:511 - info: [debug] [ADB] Patching 'D:\SDK\sdk\build-tools\25.0.0\apksigner.bat' for Windows...
+2018-10-24 08:01:34:516 - info: [debug] [ADB] Starting patched 'C:\Users\201805~1\AppData\Local\Temp\2018924-110236-1t7ytod.tzsh\apksigner.bat' with args 'sign,--key,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\keys\testkey.pk8,--cert,C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-adb\keys\testkey.x509.pem,E:\pythonProject\appiumTest\nurotron\app\app-debug.apk'
+2018-10-24 08:01:34:668 - info: [debug] [ADB] Getting install status for com.nurotron.ble_ui
+2018-10-24 08:01:34:668 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell pm list packages com.nurotron.ble_ui'
+2018-10-24 08:01:35:665 - info: [debug] [ADB] App is installed
+2018-10-24 08:01:35:665 - info: [debug] [ADB] Getting package info for 'com.nurotron.ble_ui'
+2018-10-24 08:01:35:665 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell dumpsys package com.nurotron.ble_ui'
+2018-10-24 08:01:35:774 - info: [debug] [ADB] The installed 'com.nurotron.ble_ui' package does not require upgrade ('2.0.2' >= '1.1.3')
+2018-10-24 08:01:35:775 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell am force-stop io.appium.uiautomator2.server'
+2018-10-24 08:01:36:755 - info: [UiAutomator2] Starting uiautomator2 server 1.12.0
+2018-10-24 08:01:36:755 - info: [UiAutomator2] Using UIAutomator2 server from 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v1.12.0.apk' and test from 'C:\Users\2018051001\AppData\Roaming\npm\node_modules\appium\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
+2018-10-24 08:01:36:756 - info: [UiAutomator2] Running command: 'adb -s 298384e47d74 shell am instrument -w io.appium.uiautomator2.server.test/android.support.test.runner.AndroidJUnitRunner'
+2018-10-24 08:01:36:758 - info: [UiAutomator2] Waiting up to 20000ms for UiAutomator2 to be online...
+2018-10-24 08:01:36:760 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8210/wd/hub/status] with no body
+2018-10-24 08:01:37:784 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8210/wd/hub/status] with no body
+2018-10-24 08:01:38:790 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8210/wd/hub/status] with no body
+2018-10-24 08:01:39:801 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8210/wd/hub/status] with no body
+2018-10-24 08:01:40:804 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8210/wd/hub/status] with no body
+2018-10-24 08:01:40:860 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\"sessionId\":\"SESSIONID\",\"status\":0,\"value\":\"Status Invoked\"}"
+2018-10-24 08:01:40:861 - info: [debug] [JSONWP Proxy] Proxying [POST /session] to [POST http://localhost:8210/wd/hub/session] with body: {"desiredCapabilities":{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","udid":"298384e47d74","noReset":true,"deviceName":"298384e47d74","autoGrantPermissions":true,"unicodeKeyboard":true,"resetKeyboard":true,"automationName":"Uiautomator2","app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk"},"platformName":"Android","udid":"298384e47d74","noReset":true,"deviceName":"298384e47d74","autoGrantPermissions":true,"unicodeKeyboard":true,"resetKeyboard":true,"automationName":"Uiautomator2","app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk","deviceUDID":"298384e47d74","platformVersion":"7.1.2","deviceScreenSize":"720x1280","deviceScreenDensity":320,"deviceModel":"Redmi 5A","deviceManufacturer":"Xiaomi","deviceApiLevel":25,"appPackage":"com.nurotron.ble_ui"}}
+2018-10-24 08:01:40:887 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"b00406f5-9b59-4997-af62-c49546710bbb","status":0,"value":"Created Session"}
+2018-10-24 08:01:40:888 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell dumpsys window'
+2018-10-24 08:01:40:979 - info: [AndroidDriver] Screen already unlocked, doing nothing
+2018-10-24 08:01:40:979 - info: [UiAutomator2] UiAutomator2 did not start the activity we were waiting for, 'com.nurotron.ble_ui/com.nurotron.ble_ui.SplashActivity'. Starting it ourselves
+2018-10-24 08:01:40:980 - info: [debug] [ADB] Device API level: 25
+2018-10-24 08:01:40:980 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell am start -W -n com.nurotron.ble_ui/com.nurotron.ble_ui.SplashActivity -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000'
+2018-10-24 08:01:42:570 - info: [debug] [ADB] Waiting up to 20000ms for activity matching pkg: 'com.nurotron.ble_ui' and activity: 'com.nurotron.ble_ui.SplashActivity' to be focused
+2018-10-24 08:01:42:570 - info: [debug] [ADB] Possible activities, to be checked: 'com.nurotron.ble_ui.SplashActivity', 'com.nurotron.ble_ui.com.nurotron.ble_ui.SplashActivity'
+2018-10-24 08:01:42:571 - info: [debug] [ADB] Getting focused package and activity
+2018-10-24 08:01:42:571 - info: [debug] [ADB] Running 'D:\SDK\sdk\platform-tools\adb.exe -P 5037 -s 298384e47d74 shell dumpsys window windows'
+2018-10-24 08:01:42:653 - info: [debug] [ADB] Found package: 'com.nurotron.ble_ui' and fully qualified activity name : 'com.nurotron.ble_ui.SplashActivity'
+2018-10-24 08:01:42:654 - info: [debug] [JSONWP Proxy] Proxying [GET /appium/device/pixel_ratio] to [GET http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/appium/device/pixel_ratio] with body: {}
+2018-10-24 08:01:42:673 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\"sessionId\":\"b00406f5-9b59-4997-af62-c49546710bbb\",\"status\":0,\"value\":2}"
+2018-10-24 08:01:42:674 - info: [debug] [JSONWP Proxy] Proxying [GET /appium/device/system_bars] to [GET http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/appium/device/system_bars] with body: {}
+2018-10-24 08:01:42:707 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\"sessionId\":\"b00406f5-9b59-4997-af62-c49546710bbb\",\"status\":0,\"value\":{\"statusBar\":48}}"
+2018-10-24 08:01:42:708 - info: [debug] [JSONWP Proxy] Proxying [GET /window/current/size] to [GET http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/window/current/size] with body: {}
+2018-10-24 08:01:42:726 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\"sessionId\":\"b00406f5-9b59-4997-af62-c49546710bbb\",\"status\":0,\"value\":{\"height\":1280,\"width\":720}}"
+2018-10-24 08:01:42:727 - info: [Appium] New AndroidUiautomator2Driver session created successfully, session 43bca7a0-abd6-485f-b8e3-3aba627f645c added to master session list
+2018-10-24 08:01:42:728 - info: [debug] [BaseDriver] Event 'newSessionStarted' logged at 1540368102728 (16:01:42 GMT+0800 (中国标准时间))
+2018-10-24 08:01:42:730 - info: [debug] [W3C] Responding to client with driver.createSession() result: {"capabilities":{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","udid":"298384e47d74","noReset":true,"deviceName":"298384e47d74","autoGrantPermissions":true,"unicodeKeyboard":true,"resetKeyboard":true,"automationName":"Uiautomator2","app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk"},"platformName":"Android","udid":"298384e47d74","noReset":true,"deviceName":"298384e47d74","autoGrantPermissions":true,"unicodeKeyboard":true,"resetKeyboard":true,"automationName":"Uiautomator2","app":"E:\\pythonProject\\appiumTest\\nurotron\\app\\app-debug.apk","deviceUDID":"298384e47d74","platformVersion":"7.1.2","deviceScreenSize":"720x1280","deviceScreenDensity":320,"deviceModel":"Redmi 5A","deviceManufacturer":"Xiaomi","deviceApiLevel":25,"appPackage":"com.nurotron.ble_ui","pixelRatio":2,"statBarHeight":48,"viewportRect":{"lef...
+2018-10-24 08:01:42:734 - info: [HTTP] <-- POST /wd/hub/session 200 36636 ms - 1124
+2018-10-24 08:01:42:734 - info: [HTTP] 
+2018-10-24 08:01:52:750 - info: [HTTP] --> POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element
+2018-10-24 08:01:52:751 - info: [HTTP] {"using":"id","value":"com.nurotron.ble_ui:id/enter_phone","sessionId":"43bca7a0-abd6-485f-b8e3-3aba627f645c"}
+2018-10-24 08:01:52:753 - info: [debug] [W3C] Calling AppiumDriver.findElement() with args: ["id","com.nurotron.ble_ui:id/enter_phone","43bca7a0-abd6-485f-b8e3-3aba627f645c"]
+2018-10-24 08:01:52:761 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-10-24 08:01:52:762 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2018-10-24 08:01:52:763 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/element] with body: {"strategy":"id","selector":"com.nurotron.ble_ui:id/enter_phone","context":"","multiple":false}
+2018-10-24 08:01:52:818 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"b00406f5-9b59-4997-af62-c49546710bbb","status":0,"value":{"ELEMENT":"b825ea7f-f297-4fcf-a1d3-648d5066eaa5"}}
+2018-10-24 08:01:52:819 - info: [debug] [W3C] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"b825ea7f-f297-4fcf-a1d3-648d5066eaa5"}
+2018-10-24 08:01:52:820 - info: [HTTP] <-- POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element 200 69 ms - 88
+2018-10-24 08:01:52:820 - info: [HTTP] 
+2018-10-24 08:01:52:824 - info: [HTTP] --> POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element/b825ea7f-f297-4fcf-a1d3-648d5066eaa5/value
+2018-10-24 08:01:52:824 - info: [HTTP] {"text":"13777864459","value":["1","3","7","7","7","8","6","4","4","5","9"],"id":"b825ea7f-f297-4fcf-a1d3-648d5066eaa5","sessionId":"43bca7a0-abd6-485f-b8e3-3aba627f645c"}
+2018-10-24 08:01:52:825 - info: [debug] [W3C] Calling AppiumDriver.setValue() with args: [["1","3","7","7","7","8","6","4","4","5","9"],"b825ea7f-f297-4fcf-a1d3-648d5066eaa5","43bca7a0-abd6-485f-b8e3-3aba627f645c"]
+2018-10-24 08:01:52:827 - info: [debug] [JSONWP Proxy] Proxying [POST /element/b825ea7f-f297-4fcf-a1d3-648d5066eaa5/value] to [POST http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/element/b825ea7f-f297-4fcf-a1d3-648d5066eaa5/value] with body: {"elementId":"b825ea7f-f297-4fcf-a1d3-648d5066eaa5","text":"13777864459","replace":false,"unicodeKeyboard":true}
+2018-10-24 08:01:53:414 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"b00406f5-9b59-4997-af62-c49546710bbb","status":0,"value":""}
+2018-10-24 08:01:53:415 - info: [debug] [W3C] Responding to client with driver.setValue() result: ""
+2018-10-24 08:01:53:416 - info: [HTTP] <-- POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element/b825ea7f-f297-4fcf-a1d3-648d5066eaa5/value 200 591 ms - 12
+2018-10-24 08:01:53:416 - info: [HTTP] 
+2018-10-24 08:01:56:421 - info: [HTTP] --> POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element
+2018-10-24 08:01:56:421 - info: [HTTP] {"using":"id","value":"com.nurotron.ble_ui:id/enter_password","sessionId":"43bca7a0-abd6-485f-b8e3-3aba627f645c"}
+2018-10-24 08:01:56:422 - info: [debug] [W3C] Calling AppiumDriver.findElement() with args: ["id","com.nurotron.ble_ui:id/enter_password","43bca7a0-abd6-485f-b8e3-3aba627f645c"]
+2018-10-24 08:01:56:423 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-10-24 08:01:56:423 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2018-10-24 08:01:56:424 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/element] with body: {"strategy":"id","selector":"com.nurotron.ble_ui:id/enter_password","context":"","multiple":false}
+2018-10-24 08:01:56:459 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"b00406f5-9b59-4997-af62-c49546710bbb","status":0,"value":{"ELEMENT":"6eaea753-c4f3-4fd7-bce8-3a41aff4f23b"}}
+2018-10-24 08:01:56:460 - info: [debug] [W3C] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"6eaea753-c4f3-4fd7-bce8-3a41aff4f23b"}
+2018-10-24 08:01:56:461 - info: [HTTP] <-- POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element 200 39 ms - 88
+2018-10-24 08:01:56:461 - info: [HTTP] 
+2018-10-24 08:01:56:464 - info: [HTTP] --> POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element/6eaea753-c4f3-4fd7-bce8-3a41aff4f23b/value
+2018-10-24 08:01:56:465 - info: [HTTP] {"text":"s1111111","value":["s","1","1","1","1","1","1","1"],"id":"6eaea753-c4f3-4fd7-bce8-3a41aff4f23b","sessionId":"43bca7a0-abd6-485f-b8e3-3aba627f645c"}
+2018-10-24 08:01:56:465 - info: [debug] [W3C] Calling AppiumDriver.setValue() with args: [["s","1","1","1","1","1","1","1"],"6eaea753-c4f3-4fd7-bce8-3a41aff4f23b","43bca7a0-abd6-485f-b8e3-3aba627f645c"]
+2018-10-24 08:01:56:466 - info: [debug] [JSONWP Proxy] Proxying [POST /element/6eaea753-c4f3-4fd7-bce8-3a41aff4f23b/value] to [POST http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/element/6eaea753-c4f3-4fd7-bce8-3a41aff4f23b/value] with body: {"elementId":"6eaea753-c4f3-4fd7-bce8-3a41aff4f23b","text":"s1111111","replace":false,"unicodeKeyboard":true}
+2018-10-24 08:01:57:035 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"b00406f5-9b59-4997-af62-c49546710bbb","status":0,"value":""}
+2018-10-24 08:01:57:035 - info: [debug] [W3C] Responding to client with driver.setValue() result: ""
+2018-10-24 08:01:57:036 - info: [HTTP] <-- POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element/6eaea753-c4f3-4fd7-bce8-3a41aff4f23b/value 200 572 ms - 12
+2018-10-24 08:01:57:037 - info: [HTTP] 
+2018-10-24 08:02:00:042 - info: [HTTP] --> POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element
+2018-10-24 08:02:00:042 - info: [HTTP] {"using":"id","value":"com.nurotron.ble_ui:id/user_login","sessionId":"43bca7a0-abd6-485f-b8e3-3aba627f645c"}
+2018-10-24 08:02:00:042 - info: [debug] [W3C] Calling AppiumDriver.findElement() with args: ["id","com.nurotron.ble_ui:id/user_login","43bca7a0-abd6-485f-b8e3-3aba627f645c"]
+2018-10-24 08:02:00:044 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-10-24 08:02:00:044 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2018-10-24 08:02:00:044 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/element] with body: {"strategy":"id","selector":"com.nurotron.ble_ui:id/user_login","context":"","multiple":false}
+2018-10-24 08:02:00:228 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"b00406f5-9b59-4997-af62-c49546710bbb","status":0,"value":{"ELEMENT":"7bd77018-cae9-441d-a7b5-313c95248500"}}
+2018-10-24 08:02:00:229 - info: [debug] [W3C] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"7bd77018-cae9-441d-a7b5-313c95248500"}
+2018-10-24 08:02:00:230 - info: [HTTP] <-- POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element 200 188 ms - 88
+2018-10-24 08:02:00:231 - info: [HTTP] 
+2018-10-24 08:02:00:234 - info: [HTTP] --> POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element/7bd77018-cae9-441d-a7b5-313c95248500/click
+2018-10-24 08:02:00:234 - info: [HTTP] {"id":"7bd77018-cae9-441d-a7b5-313c95248500","sessionId":"43bca7a0-abd6-485f-b8e3-3aba627f645c"}
+2018-10-24 08:02:00:235 - info: [debug] [W3C] Calling AppiumDriver.click() with args: ["7bd77018-cae9-441d-a7b5-313c95248500","43bca7a0-abd6-485f-b8e3-3aba627f645c"]
+2018-10-24 08:02:00:237 - info: [debug] [JSONWP Proxy] Proxying [POST /element/7bd77018-cae9-441d-a7b5-313c95248500/click] to [POST http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/element/7bd77018-cae9-441d-a7b5-313c95248500/click] with body: {"element":"7bd77018-cae9-441d-a7b5-313c95248500"}
+2018-10-24 08:02:00:279 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"b00406f5-9b59-4997-af62-c49546710bbb","status":0,"value":true}
+2018-10-24 08:02:00:280 - info: [debug] [W3C] Responding to client with driver.click() result: true
+2018-10-24 08:02:00:280 - info: [HTTP] <-- POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element/7bd77018-cae9-441d-a7b5-313c95248500/click 200 46 ms - 14
+2018-10-24 08:02:00:281 - info: [HTTP] 
+2018-10-24 08:02:02:285 - info: [HTTP] --> POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element
+2018-10-24 08:02:02:286 - info: [HTTP] {"using":"xpath","value":"//*[contains(@text,用户名与密码不符，请确认后重试。)]","sessionId":"43bca7a0-abd6-485f-b8e3-3aba627f645c"}
+2018-10-24 08:02:02:286 - info: [debug] [W3C] Calling AppiumDriver.findElement() with args: ["xpath","//*[contains(@text,用户名与密码不符，请确认后重试。)]","43bca7a0-abd6-485f-b8e3-3aba627f645c"]
+2018-10-24 08:02:02:288 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-10-24 08:02:02:288 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2018-10-24 08:02:02:289 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/element] with body: {"strategy":"xpath","selector":"//*[contains(@text,用户名与密码不符，请确认后重试。)]","context":"","multiple":false}
+2018-10-24 08:02:02:665 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"b00406f5-9b59-4997-af62-c49546710bbb","status":0,"value":{"ELEMENT":"73ec3539-3f7e-4083-89fb-fc55b52742f5"}}
+2018-10-24 08:02:02:666 - info: [debug] [W3C] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"73ec3539-3f7e-4083-89fb-fc55b52742f5"}
+2018-10-24 08:02:02:667 - info: [HTTP] <-- POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element 200 381 ms - 88
+2018-10-24 08:02:02:667 - info: [HTTP] 
+2018-10-24 08:02:05:688 - info: [HTTP] --> POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element
+2018-10-24 08:02:05:688 - info: [HTTP] {"using":"id","value":"com.nurotron.ble_ui:id/enter_phone","sessionId":"43bca7a0-abd6-485f-b8e3-3aba627f645c"}
+2018-10-24 08:02:05:689 - info: [debug] [W3C] Calling AppiumDriver.findElement() with args: ["id","com.nurotron.ble_ui:id/enter_phone","43bca7a0-abd6-485f-b8e3-3aba627f645c"]
+2018-10-24 08:02:05:690 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-10-24 08:02:05:690 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2018-10-24 08:02:05:691 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/element] with body: {"strategy":"id","selector":"com.nurotron.ble_ui:id/enter_phone","context":"","multiple":false}
+2018-10-24 08:02:05:717 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"b00406f5-9b59-4997-af62-c49546710bbb","status":0,"value":{"ELEMENT":"96f80eac-c965-440d-a099-61dab2346be3"}}
+2018-10-24 08:02:05:718 - info: [debug] [W3C] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"96f80eac-c965-440d-a099-61dab2346be3"}
+2018-10-24 08:02:05:718 - info: [HTTP] <-- POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element 200 30 ms - 88
+2018-10-24 08:02:05:719 - info: [HTTP] 
+2018-10-24 08:02:05:722 - info: [HTTP] --> POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element/96f80eac-c965-440d-a099-61dab2346be3/value
+2018-10-24 08:02:05:722 - info: [HTTP] {"text":"13777864459","value":["1","3","7","7","7","8","6","4","4","5","9"],"id":"96f80eac-c965-440d-a099-61dab2346be3","sessionId":"43bca7a0-abd6-485f-b8e3-3aba627f645c"}
+2018-10-24 08:02:05:723 - info: [debug] [W3C] Calling AppiumDriver.setValue() with args: [["1","3","7","7","7","8","6","4","4","5","9"],"96f80eac-c965-440d-a099-61dab2346be3","43bca7a0-abd6-485f-b8e3-3aba627f645c"]
+2018-10-24 08:02:05:724 - info: [debug] [JSONWP Proxy] Proxying [POST /element/96f80eac-c965-440d-a099-61dab2346be3/value] to [POST http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/element/96f80eac-c965-440d-a099-61dab2346be3/value] with body: {"elementId":"96f80eac-c965-440d-a099-61dab2346be3","text":"13777864459","replace":false,"unicodeKeyboard":true}
+2018-10-24 08:02:06:567 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"b00406f5-9b59-4997-af62-c49546710bbb","status":0,"value":""}
+2018-10-24 08:02:06:567 - info: [debug] [W3C] Responding to client with driver.setValue() result: ""
+2018-10-24 08:02:06:568 - info: [HTTP] <-- POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element/96f80eac-c965-440d-a099-61dab2346be3/value 200 846 ms - 12
+2018-10-24 08:02:06:568 - info: [HTTP] 
+2018-10-24 08:02:09:573 - info: [HTTP] --> POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element
+2018-10-24 08:02:09:573 - info: [HTTP] {"using":"id","value":"com.nurotron.ble_ui:id/enter_password","sessionId":"43bca7a0-abd6-485f-b8e3-3aba627f645c"}
+2018-10-24 08:02:09:574 - info: [debug] [W3C] Calling AppiumDriver.findElement() with args: ["id","com.nurotron.ble_ui:id/enter_password","43bca7a0-abd6-485f-b8e3-3aba627f645c"]
+2018-10-24 08:02:09:575 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-10-24 08:02:09:576 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2018-10-24 08:02:09:576 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/element] with body: {"strategy":"id","selector":"com.nurotron.ble_ui:id/enter_password","context":"","multiple":false}
+2018-10-24 08:02:09:608 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"b00406f5-9b59-4997-af62-c49546710bbb","status":0,"value":{"ELEMENT":"d1144d51-8ac2-4b94-ba3d-74d34f0fae29"}}
+2018-10-24 08:02:09:609 - info: [debug] [W3C] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"d1144d51-8ac2-4b94-ba3d-74d34f0fae29"}
+2018-10-24 08:02:09:610 - info: [HTTP] <-- POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element 200 36 ms - 88
+2018-10-24 08:02:09:610 - info: [HTTP] 
+2018-10-24 08:02:09:613 - info: [HTTP] --> POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element/d1144d51-8ac2-4b94-ba3d-74d34f0fae29/value
+2018-10-24 08:02:09:613 - info: [HTTP] {"text":"s1234567","value":["s","1","2","3","4","5","6","7"],"id":"d1144d51-8ac2-4b94-ba3d-74d34f0fae29","sessionId":"43bca7a0-abd6-485f-b8e3-3aba627f645c"}
+2018-10-24 08:02:09:614 - info: [debug] [W3C] Calling AppiumDriver.setValue() with args: [["s","1","2","3","4","5","6","7"],"d1144d51-8ac2-4b94-ba3d-74d34f0fae29","43bca7a0-abd6-485f-b8e3-3aba627f645c"]
+2018-10-24 08:02:09:615 - info: [debug] [JSONWP Proxy] Proxying [POST /element/d1144d51-8ac2-4b94-ba3d-74d34f0fae29/value] to [POST http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/element/d1144d51-8ac2-4b94-ba3d-74d34f0fae29/value] with body: {"elementId":"d1144d51-8ac2-4b94-ba3d-74d34f0fae29","text":"s1234567","replace":false,"unicodeKeyboard":true}
+2018-10-24 08:02:10:579 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"b00406f5-9b59-4997-af62-c49546710bbb","status":0,"value":""}
+2018-10-24 08:02:10:580 - info: [debug] [W3C] Responding to client with driver.setValue() result: ""
+2018-10-24 08:02:10:581 - info: [HTTP] <-- POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element/d1144d51-8ac2-4b94-ba3d-74d34f0fae29/value 200 967 ms - 12
+2018-10-24 08:02:10:581 - info: [HTTP] 
+2018-10-24 08:02:13:587 - info: [HTTP] --> POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element
+2018-10-24 08:02:13:587 - info: [HTTP] {"using":"id","value":"com.nurotron.ble_ui:id/user_login","sessionId":"43bca7a0-abd6-485f-b8e3-3aba627f645c"}
+2018-10-24 08:02:13:588 - info: [debug] [W3C] Calling AppiumDriver.findElement() with args: ["id","com.nurotron.ble_ui:id/user_login","43bca7a0-abd6-485f-b8e3-3aba627f645c"]
+2018-10-24 08:02:13:589 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-10-24 08:02:13:590 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2018-10-24 08:02:13:590 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/element] with body: {"strategy":"id","selector":"com.nurotron.ble_ui:id/user_login","context":"","multiple":false}
+2018-10-24 08:02:13:622 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"b00406f5-9b59-4997-af62-c49546710bbb","status":0,"value":{"ELEMENT":"eeb781dd-6941-4ebb-b4fa-32d958783b6f"}}
+2018-10-24 08:02:13:623 - info: [debug] [W3C] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"eeb781dd-6941-4ebb-b4fa-32d958783b6f"}
+2018-10-24 08:02:13:624 - info: [HTTP] <-- POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element 200 36 ms - 88
+2018-10-24 08:02:13:624 - info: [HTTP] 
+2018-10-24 08:02:13:627 - info: [HTTP] --> POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element/eeb781dd-6941-4ebb-b4fa-32d958783b6f/click
+2018-10-24 08:02:13:627 - info: [HTTP] {"id":"eeb781dd-6941-4ebb-b4fa-32d958783b6f","sessionId":"43bca7a0-abd6-485f-b8e3-3aba627f645c"}
+2018-10-24 08:02:13:628 - info: [debug] [W3C] Calling AppiumDriver.click() with args: ["eeb781dd-6941-4ebb-b4fa-32d958783b6f","43bca7a0-abd6-485f-b8e3-3aba627f645c"]
+2018-10-24 08:02:13:629 - info: [debug] [JSONWP Proxy] Proxying [POST /element/eeb781dd-6941-4ebb-b4fa-32d958783b6f/click] to [POST http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/element/eeb781dd-6941-4ebb-b4fa-32d958783b6f/click] with body: {"element":"eeb781dd-6941-4ebb-b4fa-32d958783b6f"}
+2018-10-24 08:02:13:658 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"b00406f5-9b59-4997-af62-c49546710bbb","status":0,"value":true}
+2018-10-24 08:02:13:659 - info: [debug] [W3C] Responding to client with driver.click() result: true
+2018-10-24 08:02:13:659 - info: [HTTP] <-- POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element/eeb781dd-6941-4ebb-b4fa-32d958783b6f/click 200 32 ms - 14
+2018-10-24 08:02:13:661 - info: [HTTP] 
+2018-10-24 08:02:14:665 - info: [HTTP] --> POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element
+2018-10-24 08:02:14:665 - info: [HTTP] {"using":"id","value":"android:id/message","sessionId":"43bca7a0-abd6-485f-b8e3-3aba627f645c"}
+2018-10-24 08:02:14:665 - info: [debug] [W3C] Calling AppiumDriver.findElement() with args: ["id","android:id/message","43bca7a0-abd6-485f-b8e3-3aba627f645c"]
+2018-10-24 08:02:14:667 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
+2018-10-24 08:02:14:667 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2018-10-24 08:02:14:667 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8210/wd/hub/session/b00406f5-9b59-4997-af62-c49546710bbb/element] with body: {"strategy":"id","selector":"android:id/message","context":"","multiple":false}
+2018-10-24 08:02:14:697 - info: [debug] [JSONWP Proxy] Got response with status 200: {"sessionId":"b00406f5-9b59-4997-af62-c49546710bbb","status":0,"value":{"ELEMENT":"7c144653-2673-4679-967c-ae114af1ff16"}}
+2018-10-24 08:02:14:698 - info: [debug] [W3C] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"7c144653-2673-4679-967c-ae114af1ff16"}
+2018-10-24 08:02:14:699 - info: [HTTP] <-- POST /wd/hub/session/43bca7a0-abd6-485f-b8e3-3aba627f645c/element 200 34 ms - 88
+2018-10-24 08:02:14:699 - info: [HTTP] 

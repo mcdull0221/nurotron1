@@ -8,8 +8,6 @@ PATH = lambda p: os.path.abspath(
 )
 
 
-
-
 class BaseDriver:
     def __init__(self):
         self.write_file = WriteUserCommand()
@@ -27,7 +25,7 @@ class BaseDriver:
             'resetKeyboard': 'true',
             'automationName': 'Uiautomator2',
             # 'app': 'E:\\pythonProject\\appiumTest\\nurotron\APP\\app-debug.apk',
-            'app': PATH('../app/app-debug.apk'),
+            'app': PATH('../app/app-debug.apk'),        # 不会覆盖安装
             'noReset': 'true'
         }
         driver = webdriver.Remote('http://localhost:'+str(port)+'/wd/hub', desired_caps)
