@@ -1,4 +1,3 @@
-import logging
 __author__ = 'songxiaolin'
 from util.dos_cmd import DosCmd
 from util.port import Port

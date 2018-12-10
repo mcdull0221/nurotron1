@@ -34,7 +34,7 @@ class ReadIni:
             section = 'login_element'
         try:
             value = self.data.get(section, key)
-        except:
+        except KeyError:
             value = None
         return value
 

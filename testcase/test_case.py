@@ -1,8 +1,5 @@
 import sys
 import os
-curpath = os.path.abspath(os.path.dirname(__file__))
-rootpath = os.path.split(curpath)[0]
-sys.path.append(rootpath)
 from public.driver import BaseDriver
 import time
 import multiprocessing
@@ -13,6 +10,9 @@ import HTMLTestRunner
 import unittest
 from util.server import Server
 from util.write_user_command import WriteUserCommand
+curpath = os.path.abspath(os.path.dirname(__file__))
+rootpath = os.path.split(curpath)[0]
+sys.path.append(rootpath)
 PATH = lambda p: os.path.abspath(
     os.path.join(os.path.dirname(__file__), p)
 )
@@ -96,7 +96,7 @@ def get_suite(i):
     suite.addTest(testcase('test_vol_add_03', parame=i))
     suite.addTest(testcase('test_vol_sub_04', parame=i))
     # unittest.TextTestRunner().run(suite)
-    now = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
+    now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     html_file = PATH("../result/report/") + "\\" + now + "report"+str(i) + ".html"
     fp = open(html_file, "wb")
     HTMLTestRunner.HTMLTestRunner(stream=fp, title='APP测试报告', description='用例执行情况').run(suite)
